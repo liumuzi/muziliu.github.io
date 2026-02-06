@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-white;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @apply text-black;
+  }
+
+  /* Brutalist selection */
+  ::selection {
+    @apply bg-black text-white;
+  }
+
+  /* Remove all default margins */
+  * {
+    @apply m-0 p-0;
+  }
+}
+
+@layer utilities {
+  /* Brutalist utilities */
+  .brutalist-border {
+    @apply border-6 border-black;
+  }
+
+  .brutalist-shadow {
+    box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+  }
+
+  .brutalist-shadow-sm {
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+  }
+
+  .brutalist-shadow-red {
+    box-shadow: 8px 8px 0 0 rgba(255, 0, 0, 1);
+  }
+
+  /* Hard geometric shapes */
+  .hard-square {
+    @apply border-6 border-black bg-white;
+  }
+
+  /* Monospace accent */
+  .mono-accent {
+    @apply font-mono font-bold tracking-tight;
+  }
+
+  /* Stark text */
+  .stark-text {
+    @apply font-bold uppercase tracking-wider;
+  }
+}

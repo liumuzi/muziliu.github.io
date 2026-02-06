@@ -1,0 +1,28 @@
+'use client';
+
+import React, { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from '@/hooks/useInView';
+
+interface FadeInViewProps {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+}
+
+export function FadeInView({ children, delay = 0, className }: FadeInViewProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
