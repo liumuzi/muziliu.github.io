@@ -41,33 +41,30 @@ export function Navigation() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-200',
-        scrolled
-          ? 'bg-white border-b-6 border-black'
-          : 'bg-white border-b-3 border-gray-200'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-200 bg-white border-b border-black'
       )}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => scrollToSection(SECTIONS.HERO)}
-            className="font-mono text-2xl font-bold text-black hover:text-primary transition-colors border-3 border-black px-4 py-2"
+            className="font-mono text-lg font-bold text-black hover:text-gray-600 transition-colors border border-black px-3 py-1"
           >
             ML
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-0">
             {NAV_ITEMS.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={cn(
-                  'px-4 py-2 font-sans font-bold text-sm uppercase tracking-wider transition-all border-3',
+                  'px-4 py-2 font-mono text-xs uppercase tracking-wider transition-all border-l border-black first:border-l-0',
                   activeSection === item.id
-                    ? 'bg-black text-white border-black'
-                    : 'bg-white text-black border-black hover:bg-primary hover:text-white hover:border-primary'
+                    ? 'bg-black text-white font-bold'
+                    : 'bg-white text-black hover:bg-gray-100 font-bold'
                 )}
               >
                 {t(item.label)}

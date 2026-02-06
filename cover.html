@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Cover</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@900&family=JetBrains+Mono:wght@400;500&display=swap");
+
+      body {
+        background-color: #e6e6e6;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+      }
+
+      .font-mono-custom {
+        font-family: "JetBrains Mono", "Courier New", Courier, monospace;
+      }
+
+      /* 背景对角线 */
+      .diagonal-line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200vw;
+        height: 1px;
+        background-color: #d4d4d4;
+        transform: translate(-50%, -50%) rotate(35deg);
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* 按钮悬停效果 - 直角 */
+      .btn-minimal {
+        transition: all 0.1s ease;
+      }
+      .btn-minimal:hover {
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+      }
+
+      /* 滚动条隐藏 */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* 十字准星装饰 */
+      .crosshair {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        pointer-events: none;
+        z-index: 20;
+      }
+      .crosshair::before,
+      .crosshair::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+      }
+      .crosshair::before {
+        top: 4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+      }
+      .crosshair::after {
+        left: 4px;
+        top: 0;
+        height: 100%;
+        width: 1px;
+      }
+    </style>
+  </head>
+  <body class="h-screen w-full relative flex items-center p-4 sm:p-10">
+    <!-- 背景装饰线 -->
+    <div class="diagonal-line"></div>
+
+    <!-- 主卡片容器 (直角 + 黑色细边框) -->
+    <div
+      class="relative z-10 bg-white border border-black shadow-2xl w-full max-w-[420px] overflow-hidden flex flex-col h-[85vh] max-h-[700px] mx-auto sm:mx-0"
+    >
+      <!-- 角落装饰 -->
+      <div class="crosshair top-2 left-2"></div>
+      <div class="crosshair top-2 right-2"></div>
+      <div class="crosshair bottom-2 left-2"></div>
+      <div class="crosshair bottom-2 right-2"></div>
+
+      <!-- 头部：名字 (单行 + 紧凑) -->
+      <div class="px-5 pt-8 pb-4 border-b border-black">
+        <h1
+          class="text-[3.5rem] leading-none font-black tracking-tighter text-gray-900 uppercase whitespace-nowrap overflow-hidden"
+        >
+          YANG LI
+        </h1>
+      </div>
+
+      <!-- 列表区域：履历/Title (字体更小，间距更紧) -->
+      <div class="flex-1 overflow-y-auto font-mono-custom text-[11px]">
+        <!-- Item 1 -->
+        <div
+          class="border-b border-gray-200 px-5 py-3 group cursor-default hover:bg-gray-50 transition-colors"
+        >
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold text-black">2024 - PRESENT</span>
+            <span
+              class="text-gray-400 group-hover:text-black transition-colors text-[10px]"
+              >01</span
+            >
+          </div>
+          <div class="text-gray-600 uppercase tracking-wide leading-tight">
+            Senior Algo Engineer<br />
+            <span class="text-gray-400 text-[10px]">LLM & NLP Focus</span>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          class="border-b border-gray-200 px-5 py-3 group cursor-default hover:bg-gray-50 transition-colors"
+        >
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold text-black">2022 - 2024</span>
+            <span
+              class="text-gray-400 group-hover:text-black transition-colors text-[10px]"
+              >02</span
+            >
+          </div>
+          <div class="text-gray-600 uppercase tracking-wide leading-tight">
+            Indie Game Designer<br />
+            <span class="text-gray-400 text-[10px]"
+              >Unity 3D / Interaction</span
+            >
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div
+          class="border-b border-gray-200 px-5 py-3 group cursor-default hover:bg-gray-50 transition-colors"
+        >
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold text-black">2020 - 2022</span>
+            <span
+              class="text-gray-400 group-hover:text-black transition-colors text-[10px]"
+              >03</span
+            >
+          </div>
+          <div class="text-gray-600 uppercase tracking-wide leading-tight">
+            Full Stack Dev (Web3)<br />
+            <span class="text-gray-400 text-[10px]"
+              >Frontend & Smart Contracts</span
+            >
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div
+          class="border-b border-gray-200 px-5 py-3 group cursor-default hover:bg-gray-50 transition-colors"
+        >
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold text-black">PROJECT</span>
+            <span
+              class="text-gray-400 group-hover:text-black transition-colors text-[10px]"
+              >SIDE</span
+            >
+          </div>
+          <div class="text-gray-600 uppercase tracking-wide leading-tight">
+            "Neon City" Visual Novel<br />
+            <span class="text-gray-400 text-[10px]">Narrative & Scripting</span>
+          </div>
+        </div>
+
+        <!-- Item 5 (Added to show compactness) -->
+        <div
+          class="border-b border-gray-200 px-5 py-3 group cursor-default hover:bg-gray-50 transition-colors"
+        >
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold text-black">EDUCATION</span>
+            <span
+              class="text-gray-400 group-hover:text-black transition-colors text-[10px]"
+              >EDU</span
+            >
+          </div>
+          <div class="text-gray-600 uppercase tracking-wide leading-tight">
+            M.S. Computer Science<br />
+            <span class="text-gray-400 text-[10px]">Stanford University</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部按钮区 (直角) -->
+      <div class="p-5 mt-auto border-t border-black bg-white">
+        <div class="grid grid-cols-2 gap-3 font-mono-custom text-[11px]">
+          <button
+            class="btn-minimal border border-gray-300 py-2 px-4 text-center uppercase tracking-wider text-black font-bold"
+          >
+            Contact
+          </button>
+          <button
+            class="btn-minimal border border-gray-300 py-2 px-4 text-center uppercase tracking-wider text-black font-bold flex items-center justify-center gap-2"
+          >
+            Portfolio
+            <i class="fa-solid fa-arrow-right -rotate-45 text-[9px]"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 右下角浮动社交栏 (直角) -->
+    <div
+      class="fixed bottom-6 right-6 z-20 flex flex-col gap-0 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]"
+    >
+      <a
+        href="#"
+        class="w-9 h-9 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all border-b border-gray-200 last:border-0"
+      >
+        <i class="fa-brands fa-github text-sm"></i>
+      </a>
+      <a
+        href="#"
+        class="w-9 h-9 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all border-b border-gray-200 last:border-0"
+      >
+        <i class="fa-brands fa-twitter text-sm"></i>
+      </a>
+      <a
+        href="#"
+        class="w-9 h-9 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all border-b border-gray-200 last:border-0"
+      >
+        <i class="fa-brands fa-instagram text-sm"></i>
+      </a>
+      <a
+        href="#"
+        class="w-9 h-9 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all"
+      >
+        <i class="fa-solid fa-envelope text-sm"></i>
+      </a>
+    </div>
+  </body>
+</html>

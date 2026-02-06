@@ -10,8 +10,8 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id={SECTIONS.CONTACT} className="py-24 bg-gray-100 border-t-6 border-black">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id={SECTIONS.CONTACT} className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '联系方式', en: 'CONTACT' }}
           subtitle={{
@@ -20,35 +20,35 @@ export function Contact() {
           }}
         />
 
-        <div className="border-8 border-black bg-white p-8 brutalist-shadow-red">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="border-l-6 border-primary pl-4">
-              <p className="font-mono text-xs text-gray-600 mb-2 uppercase font-bold">
-                // {t({ zh: '邮箱', en: 'EMAIL' })}
+        <div className="border border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] p-8 max-w-4xl">
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="border-l-3 border-black pl-4">
+              <p className="font-mono text-[10px] text-gray-500 mb-2 uppercase font-bold">
+                EMAIL
               </p>
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-xl font-bold text-black hover:text-primary transition-colors break-all"
+                className="text-base font-bold text-black hover:text-gray-600 transition-colors break-all"
               >
                 {personalInfo.email}
               </a>
             </div>
-            <div className="border-l-6 border-primary pl-4">
-              <p className="font-mono text-xs text-gray-600 mb-2 uppercase font-bold">
-                // {t({ zh: '电话', en: 'PHONE' })}
+            <div className="border-l-3 border-black pl-4">
+              <p className="font-mono text-[10px] text-gray-500 mb-2 uppercase font-bold">
+                PHONE
               </p>
               <a
                 href={`tel:${personalInfo.phone}`}
-                className="text-xl font-bold text-black hover:text-primary transition-colors"
+                className="text-base font-bold text-black hover:text-gray-600 transition-colors"
               >
                 {personalInfo.phone}
               </a>
             </div>
           </div>
 
-          <div className="border-t-3 border-black pt-6">
-            <p className="font-mono text-xs text-gray-600 mb-4 uppercase font-bold">
-              // {t({ zh: '社交媒体', en: 'SOCIAL' })}
+          <div className="border-t border-gray-200 pt-6">
+            <p className="font-mono text-[10px] text-gray-500 mb-3 uppercase font-bold">
+              SOCIAL
             </p>
             <div className="flex flex-wrap gap-3">
               {personalInfo.links.map((link) => (
@@ -57,7 +57,7 @@ export function Contact() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-3 border-black bg-white px-6 py-3 font-mono font-bold text-sm uppercase hover:bg-black hover:text-white transition-colors"
+                  className="border border-gray-300 bg-white px-4 py-2 font-mono font-bold text-xs uppercase hover:bg-black hover:text-white hover:border-black transition-all"
                 >
                   {link.label}
                 </a>

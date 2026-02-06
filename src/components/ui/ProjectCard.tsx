@@ -9,32 +9,32 @@ interface ProjectCardProps {
   delay?: number;
 }
 
-export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   const { t } = useLanguage();
 
   return (
     <div className="group relative h-full">
-      <div className="h-full border-6 border-black bg-white p-6 hover:brutalist-shadow transition-all duration-200">
+      <div className="h-full border border-black bg-white p-5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] transition-all duration-200">
         {/* Content */}
-        <div className="space-y-4 h-full flex flex-col">
+        <div className="space-y-3 h-full flex flex-col">
           {/* Header with status */}
-          <div className="flex items-start justify-between gap-4 border-b-3 border-black pb-4">
+          <div className="flex items-start justify-between gap-3 border-b border-gray-200 pb-3">
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-black uppercase tracking-tight leading-tight">
+              <h3 className="text-lg font-bold text-black uppercase tracking-tight leading-tight">
                 {t(project.title)}
               </h3>
-              <p className="text-sm text-gray-700 mt-2 font-mono">{t(project.subtitle)}</p>
+              <p className="text-xs text-gray-600 mt-1 font-mono">{t(project.subtitle)}</p>
             </div>
             {project.status && (
-              <div className="border-3 border-black bg-primary px-3 py-1">
-                <span className="font-mono text-xs font-bold text-white uppercase">
+              <div className="border border-black bg-gray-100 px-2 py-1">
+                <span className="font-mono text-[10px] font-bold text-black uppercase">
                   {t(project.status)}
                 </span>
               </div>
             )}
           </div>
 
-          <p className="font-mono text-xs text-gray-600 font-bold uppercase">{t(project.period)}</p>
+          <p className="font-mono text-[10px] text-gray-500 font-bold uppercase">{t(project.period)}</p>
 
           {/* Description */}
           <p className="text-black leading-relaxed text-sm flex-1">
@@ -43,11 +43,11 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
 
           {/* Achievements */}
           {project.achievements && project.achievements.length > 0 && (
-            <div className="space-y-2 py-3 border-t-3 border-black">
+            <div className="space-y-2 py-3 border-t border-gray-200">
               {project.achievements.map((achievement, idx) => (
-                <div key={idx} className="flex items-start gap-2 text-sm">
-                  <span className="text-primary font-bold mt-1">▸</span>
-                  <span className="text-black font-medium">{t(achievement)}</span>
+                <div key={idx} className="flex items-start gap-2 text-xs">
+                  <span className="text-black font-bold mt-0.5">▸</span>
+                  <span className="text-gray-700">{t(achievement)}</span>
                 </div>
               ))}
             </div>
@@ -58,7 +58,7 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="border-2 border-black px-3 py-1 text-xs font-mono font-bold uppercase bg-white hover:bg-black hover:text-white transition-colors"
+                className="border border-gray-300 px-2 py-1 text-[10px] font-mono font-bold uppercase bg-white hover:bg-gray-100 transition-colors"
               >
                 {tag}
               </span>
@@ -67,14 +67,14 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
 
           {/* Links */}
           {project.links && project.links.length > 0 && (
-            <div className="flex gap-3 pt-3 border-t-3 border-black">
+            <div className="flex gap-2 pt-3 border-t border-gray-200">
               {project.links.map((link, idx) => (
                 <a
                   key={idx}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-3 border-black bg-white px-4 py-2 font-mono text-xs font-bold uppercase hover:bg-primary hover:text-white hover:border-primary transition-colors"
+                  className="border border-gray-300 bg-white px-3 py-2 font-mono text-[10px] font-bold uppercase hover:bg-black hover:text-white hover:border-black transition-all"
                 >
                   {t(link.label)} →
                 </a>

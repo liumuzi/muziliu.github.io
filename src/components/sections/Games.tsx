@@ -8,7 +8,7 @@ import { SECTIONS } from '@/lib/constants';
 
 export function Games() {
   return (
-    <section id={SECTIONS.GAMES} className="py-24 bg-white">
+    <section id={SECTIONS.GAMES} className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '游戏作品', en: 'GAMES' }}
@@ -18,9 +18,9 @@ export function Games() {
           }}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {games.map((game, idx) => (
-            <ProjectCard key={game.id} project={game} delay={idx * 0.1} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {games.map((game) => (
+            <ProjectCard key={game.id} project={game} />
           ))}
         </div>
       </div>

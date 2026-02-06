@@ -10,8 +10,8 @@ export function Skills() {
   const { t } = useLanguage();
 
   return (
-    <section id={SECTIONS.SKILLS} className="py-24 bg-white border-t-6 border-black">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id={SECTIONS.SKILLS} className="py-20 bg-gray-200 border-y border-black">
+      <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '技能', en: 'SKILLS' }}
           subtitle={{
@@ -20,17 +20,17 @@ export function Skills() {
           }}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skills.map((category, idx) => (
-            <div key={category.id} className="border-6 border-black bg-gray-100 p-6">
-              <h3 className="font-mono text-xl font-bold text-black uppercase mb-4 border-b-3 border-black pb-2">
-                [{t(category.category)}]
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+          {skills.map((category) => (
+            <div key={category.id} className="border border-black bg-white p-5">
+              <h3 className="font-mono text-sm font-bold text-black uppercase mb-4 border-b border-gray-200 pb-2">
+                {t(category.category)}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, sidx) => (
                   <span
                     key={sidx}
-                    className="border-2 border-black px-3 py-1 text-sm font-sans font-bold bg-white hover:bg-black hover:text-white transition-colors"
+                    className="border border-gray-300 px-3 py-1 text-xs font-mono font-bold bg-white hover:bg-black hover:text-white hover:border-black transition-all"
                   >
                     {t(skill)}
                   </span>
