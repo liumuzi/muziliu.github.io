@@ -1,0 +1,177 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{zhnumber}
+
+\usepackage[a4paper,margin=0.75in,top=0.6in,bottom=0.6in]{geometry}
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+\usepackage{resume}
+% packages that not in the original template
+\usepackage{enumitem}
+
+
+\begin{document}
+\sloppy 
+
+
+% PERSONAL INFO
+\maintitle{刘木子}{}{更新于 \zhtoday}
+
+\nobreakvspace{0.3em}
+
+\noindent\href{mailto:liumuzi.at.link.dot.cuhk.dot.edu.dot.hk}{liumuzi\mbox{}@\mbox{}link.cuhk.edu.hk}\sbull
+\textsmaller{+}86.15921643461 \sbull 上海市浦东新区
+\\\sbull \href{https://www.linkedin.com/in/muzi-liu-7337b1258}{LinkedIn} \sbull \href{https://github.com/liumuzi}{GitHub} \sbull \href{https://liumuzi.github.io/}{个人网站}
+
+% EXPERIENCE
+%\roottitle{Research Experience}
+\roottitle{项目与科研经历 Research \& Projects}
+
+\headedsection
+  {\emph{独立游戏开发（主程序、策划）}}
+  {2024年9月 -- 至今}
+  {
+  \headedsubsection
+    {《我的恋综超失控》（进行中）}
+    {}
+    {\bodytext{\bull \ \ AI驱动的恋综修罗场：化身导演操控嘉宾，在不可控的即兴互动中制造“抓马”剧情，收割全网流量 \\ 
+    \bull \ \ 负责核心程序实现，并参与所有游戏设计决策 \\ 
+    \bull \ \ 腾讯游戏创作大赛2025参赛项目，获得AI玩法创作奖
+    }}
+  \headedsubsection
+    {《虫虫家装》（进行中）}
+    {}
+    {\bodytext{\bull \ \ 温情的装修冒险：在危险的丛林中搜集资源，为水獭家族等小动物装修梦想之家，建立跨种族的羁绊 \\ 
+    \bull \ \ 负责核心程序实现，设计装修+搜打撤的核心玩法，并制作原型验证 \\ 
+    \bull \ \ 组建六人开发团队，主导团队协作与敏捷开发流程，负责制定里程碑、任务分配与进度管理
+    }}
+  \headedsubsection
+    {\href{https://scheminghare.itch.io/not-again-hero}{《Not Again, Hero》}（Demo）}
+    {}
+    {\bodytext{\bull \ \ 童话风叙事解密：重组剧情卡片，在无限循环的英雄剧本中，寻找逃离幻想的真相 \\
+    \bull \ \ 负责核心程序实现，独立设计核心叙事诡计 \\
+    \bull \ \ GMTK2025参赛，叙事性排名\#141/9562（前1\%）
+    }}
+  \headedsubsection
+    {\href{https://www.taptap.cn/app/780672?os=pc}{《报错漫游指南》（Demo）}}
+    {}
+    {\bodytext{\bull \ \ 平台跳跃解密：程序员半夜加班写代码竟然把自己写进电脑里了！？穿越Bug世界，修复代码逃出程序！
+    \bull \ \ 55人下载试玩，评分10/10
+    }}
+  \headedsubsection
+    {\href{https://scheminghare.itch.io/farty-party}{《Farty Party》}（Demo）}
+    {}
+    {\bodytext{\bull \ \ 无厘头乱斗派对：上演“有屁快放”的抢食大战！利用连环屁、火箭屁轰飞对手，在混乱中争夺冠军 \\
+    \bull \ \ 独立设计与开发，一人完成程序、美术与音效制作
+    }}
+  }
+
+\headedsection
+  {\emph{图形算法工程师}}
+  {\textsc{米哈游，上海}} {
+  \headedsubsection
+    {口型动画生成算法}
+    {2021年2月 -- 2024年9月}
+    {\bodytext{\bull \ \ 维护人声学到口型的Kaldi管线：配音转文字与音素时长对齐，后处理后驱动口型blendshape \\ 
+    \bull \ \ 独立负责后处理与算法优化，提升动画效果，并支持多语言口型生成。\\ 
+    \bull \ \ 独立负责维护训练与推理服务，保障管线稳定运行；后续端到端模型以该流程为基础\\
+    \bull \ \ 在《原神》的制作中投入使用，实现了90\%以上的口型动画全自动生成，无需动画师二次调整。
+    }}
+  \headedsubsection
+    {表情动画生成算法}
+    {}
+    {\bodytext{\bull \ \ 基于模型完成语音情绪识别；并与动画师协作，按音频区间生成表情动画 \\ 
+    \bull \ \ 独立负责情绪识别模块，制定情绪标签体系并优化识别效果 \\ 
+    \bull \ \ 参与动画生成工程，实现规则化pose自动排布
+    }}
+  \headedsubsection
+    {动作匹配算法}
+    {}
+    {\bodytext{\bull \ \ 基于LLM为台词生成动作标签，构建台词-动作自动匹配流程 \\ 
+    \bull \ \ 收集数据并调优prompt，提升了动作标签一致性与可用性，减少了策划配置剧情动画的工作量
+    }}
+  }
+
+\headedsection
+  {\emph{实习应用研究员}}
+  {\textsc{腾讯光子工作室，深圳}} {
+  \headedsubsection
+    {《英雄联盟手游》NPC算法}
+    {2020年6月 -- 2020年8月}
+    {\bodytext{\bull \ \ 主导搭建监督学习训练流程，复现OpenAI Five论文中的核心方法 \\ 
+    \bull \ \ 搭建并完善MOBA游戏Demo训练环境，丰富对战场景以支持Agent训练 \\
+    \bull \ \ 使用PPO在MOBA环境中训练智能体，并负责模型训练与调优，显著提升了智能体的表现
+    }}
+  }
+
+\headedsection
+  {\emph{助理研究员}}
+  {\textsc{香港中文大学，香港}} {
+  \headedsubsection
+    {使用强化学习完成的语汇合作游戏（Lexicon Coordination Game）}
+    {2018年1月 -- 2019年7月}
+    {\bodytext{\bull \ \ 在语汇合作游戏中，提出新的强化学习方法，发现了网络中局部语汇共识对整体语汇共识的阻碍 \\ 
+    \bull \ \ 独立写作\href{https://dl.acm.org/doi/abs/10.1007/978-3-030-61401-0_64}{论文}，发表于ICAISC 2020会议
+    }}
+  
+  \headedsubsection
+    {\href{http://www.eim.hk/}{运动是良药 Exercise Is Medicine (EIM)：慢性病患者的运动监督程序}}
+    {2019年5月 -- 2019年9月}
+    {\bodytext{\bull \ \ 训练LSTM神经网络，检测运动手环佩戴位置，提升运动量估算的准确度
+    }}
+  
+  \headedsubsection
+    {\href{https://funtomove-jc.hk/zh/}{家校童喜动 FunToMove @ JC: 学童运动监督程序}}
+    {}
+    {\bodytext{\bull \ \ 使用 TypeORM 和 MSSQL 数据库，开发后端 RESTful API 
+    }}
+  }
+
+
+\vspace{-0.9em}
+
+% EDUCATION
+\roottitle{教育背景 Education}
+
+\headedsection
+  {\href{http://www.cuhk.edu.hk/english/index.html}{香港中文大学}}
+  {\textsc{中国香港}} {
+  \headedsubsection
+    {\emph{学士} 计算机科学 (人工智能方向)}
+    {2015 -- 2020}
+    {\bodytext{\bull \ \ 专业绩点: 3.70 / 4.00 \sbull 工程学院院长名单 (学院前 10\%)
+    }}
+  }
+
+\headedsection
+  {\href{https://www.cmc.edu/}{克莱蒙特麦肯纳夫人学院}}
+  {\textsc{美国加州}} {%
+  \headedsubsection
+    {\emph{交换学生}}
+    {2017 -- 2018}
+    {\bodytext{\bull \ \ Introduction to Psychology (A-) \bull \ \ Neuropsychology (A-)}}
+}
+\vspace{-0.9em}
+
+% SKILLS
+\roottitle{语言与技能 Skills}
+
+\headedsection{专业技能：}{}{
+\emph{编程语言：} C\# (Unity), Python, C/C++, Java\\
+\emph{算法与应用：} 强化学习、语音/情绪识别、口型/表情/动作生成\\
+\emph{工程与数据：} 模型训练与调优、数据收集与标注、服务部署与维护、数据库 (SQL/NoSQL)
+}
+
+\headedsection{语言：}{}{
+普通话（母语），粤语（基础），英语（TOEFL 106/120）及日语（基础）}
+\vspace{-0.9em}
+
+
+% HONORS
+%\roottitle{获奖情况 Honors \& Awards}
+%学期交换奖学金 2016/17 \hfill 香港中文大学，伍宜孙书院\\
+%康本国际交流奖学金 \hfill 香港中文大学，学术链接办公室（OAL）\\
+%新生入学奖学金 \hfill 香港中文大学，工程学院\\
+%\vspace{-1.3em}
+
+\end{document}
