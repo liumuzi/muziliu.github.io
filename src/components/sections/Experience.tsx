@@ -9,7 +9,7 @@ import { SECTIONS } from '@/lib/constants';
 
 export function Experience() {
   return (
-    <section id={SECTIONS.EXPERIENCE} className="py-24 bg-gray-100 border-y-2 border-gray-800">
+    <section id={SECTIONS.EXPERIENCE} className="py-20 bg-gray-100 border-y-2 border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '工作经历', en: 'EXPERIENCE' }}

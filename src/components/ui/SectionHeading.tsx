@@ -13,9 +13,9 @@ export function SectionHeading({ title, subtitle }: SectionHeadingProps) {
   const { t } = useLanguage();
 
   return (
-    <div className="mb-12 max-w-4xl">
+    <div className="mb-16 max-w-4xl">
       <div className="border-l-3 border-black pl-4">
-        <h2 className="font-sans text-3xl font-black text-gray-900 uppercase tracking-tight mb-2">
+        <h2 className="font-sans text-5xl font-black text-gray-900 uppercase tracking-tight mb-2">
           {t(title)}
         </h2>
         {subtitle && (

@@ -10,7 +10,7 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id={SECTIONS.CONTACT} className="py-24 bg-gray-100">
+    <section id={SECTIONS.CONTACT} className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '联系方式', en: 'CONTACT' }}

@@ -5,7 +5,7 @@ export const games: GameProject[] = [
     id: 'dating-show',
     title: {
       zh: '我的恋综超失控',
-      en: 'My Dating Show Is Out of Control',
+      en: 'Love Mission 404',
     },
     subtitle: {
       zh: 'AI驱动的恋综游戏',
@@ -21,8 +21,8 @@ export const games: GameProject[] = [
     },
     achievements: [
       {
-        zh: '荣获腾讯游戏大赛2025 AI玩法赛道奖项',
-        en: 'Winner of Tencent Game Competition 2025 AI Gameplay Award',
+        zh: '荣获腾讯游戏创作大赛2025 AI玩法创作奖',
+        en: 'Winner of Tencent Game Creation Competition 2025 AI Gameplay Innovation Award',
       },
     ],
     tags: ['Unity', 'C#', 'AI/LLM', 'Narrative'],
@@ -30,6 +30,7 @@ export const games: GameProject[] = [
       zh: '开发中',
       en: 'In Development',
     },
+    image: '/images/games/dating-show.png',
   },
   {
     id: 'bug-decor',
@@ -54,6 +55,7 @@ export const games: GameProject[] = [
       zh: '开发中',
       en: 'In Development',
     },
+    image: '/images/games/bug-decor.jpg',
     links: [],
   },
   {
@@ -81,6 +83,7 @@ export const games: GameProject[] = [
       },
     ],
     tags: ['Unity', 'C#', 'Game Jam', 'Narrative'],
+    image: '/images/games/not-again-hero.png',
     links: [
       {
         label: {
@@ -116,6 +119,7 @@ export const games: GameProject[] = [
       },
     ],
     tags: ['Unity', 'C#', 'Puzzle', 'Meta'],
+    image: '/images/games/error-guide.png',
     links: [
       {
         label: {
@@ -145,6 +149,7 @@ export const games: GameProject[] = [
       en: 'Absurd brawler party: chaotic food fight powered by chained and rocket farts to knock rivals away. Solo-created: design, code, art, and audio.',
     },
     tags: ['Unity', 'C#', 'Multiplayer', 'Solo Dev'],
+    image: '/images/games/farty-party.png',
     links: [
       {
         label: {

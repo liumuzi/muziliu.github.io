@@ -10,7 +10,7 @@ export function Research() {
   const { t } = useLanguage();
 
   return (
-    <section id={SECTIONS.RESEARCH} className="py-24 bg-white border-b-2 border-gray-800">
+    <section id={SECTIONS.RESEARCH} className="py-20 bg-white border-b-2 border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '研究项目', en: 'RESEARCH' }}
@@ -25,7 +25,7 @@ export function Research() {
             <div key={project.id} className="bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow hover:-translate-y-0.5 transition-all duration-200 p-6">
               <div className="space-y-3">
                 <div className="border-b border-gray-200 pb-3">
-                  <h3 className="text-lg font-bold text-black uppercase tracking-tight">
+                  <h3 className="text-lg font-bold text-gray-900 uppercase tracking-tight">
                     {t(project.title)}
                   </h3>
                   <div className="flex flex-wrap gap-3 text-xs text-gray-500 mt-2 font-mono">
@@ -35,16 +35,16 @@ export function Research() {
                   </div>
                 </div>
 
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs text-gray-600 leading-snug">
                   {t(project.description)}
                 </p>
 
                 {project.achievements && project.achievements.length > 0 && (
                   <ul className="space-y-1">
                     {project.achievements.map((achievement, aidx) => (
-                      <li key={aidx} className="flex items-start gap-2 text-xs text-gray-600">
-                        <span className="text-black font-bold mt-0.5">▸</span>
-                        <span>{t(achievement)}</span>
+                      <li key={aidx} className="flex items-start gap-2 text-xs text-gray-800">
+                        <span className="text-gray-800 font-bold mt-0.5">▸</span>
+                        <span className="font-medium">{t(achievement)}</span>
                       </li>
                     ))}
                   </ul>
@@ -68,10 +68,10 @@ export function Research() {
 
                 {project.publication && (
                   <div className="bg-gray-100 border border-gray-300 p-4 mt-3">
-                    <p className="text-xs font-bold text-black uppercase mb-2 font-mono">
+                    <p className="text-xs font-bold text-gray-900 uppercase mb-2 font-mono">
                       PUBLICATION
                     </p>
-                    <p className="text-sm text-black font-bold">
+                    <p className="text-sm text-gray-900 font-bold">
                       {t(project.publication.title)}
                     </p>
                     <p className="text-xs text-gray-600 mt-1 font-mono">

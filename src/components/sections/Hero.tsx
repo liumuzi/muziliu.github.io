@@ -27,7 +27,7 @@ export function Hero() {
     {
       period: { zh: '2024.09 - 至今', en: '2024.09 - PRESENT' },
       title: { zh: '独立游戏开发', en: 'INDIE GAME DEV' },
-      subtitle: { zh: '腾讯游戏大赛AI玩法奖', en: 'TENCENT GAME AWARD' },
+      subtitle: { zh: '腾讯创作大赛AI玩法创作奖', en: 'TENCENT AI INNOVATION AWARD' },
       index: '01',
     },
     {
@@ -73,7 +73,7 @@ export function Hero() {
       {/* Left aligned container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* Main card container - left aligned */}
-        <div className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col h-[85vh] max-h-[700px]">
+        <div className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col">
           {/* Corner crosshairs */}
           <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none z-20">
             <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
@@ -94,17 +94,17 @@ export function Hero() {
 
           {/* Header: Name */}
           <div className="px-5 pt-8 pb-4 border-b-2 border-gray-800">
-            <h1 className="text-[4rem] leading-none font-black tracking-tighter text-gray-900 uppercase whitespace-nowrap overflow-hidden">
+            <h1 className={`leading-none font-black tracking-tighter text-gray-900 uppercase ${language === 'zh' ? 'text-7xl md:text-8xl' : 'text-6xl md:text-7xl'}`}>
               {language === 'zh' ? '刘木子' : 'MUZI LIU'}
             </h1>
           </div>
 
           {/* Timeline list area */}
-          <div className="flex-1 overflow-y-auto font-mono text-[11px]">
+          <div className="font-mono text-[11px]">
             {timelineItems.map((item, idx) => (
               <div
                 key={idx}
-                className="border-b border-gray-200 px-5 py-3 group cursor-default hover:bg-gray-50 transition-colors"
+                className="border-b border-gray-200 px-5 py-2 group cursor-default hover:bg-gray-50 transition-colors"
               >
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-bold text-black">{t(item.period)}</span>
@@ -115,7 +115,9 @@ export function Hero() {
                 <div className="text-gray-600 uppercase tracking-wide leading-tight">
                   {t(item.title)}
                   <br />
-                  <span className="text-gray-400 text-[10px]">{t(item.subtitle)}</span>
+                  <span className={idx === 0 ? 'text-gray-900 text-sm font-bold' : 'text-gray-400 text-[10px]'}>
+                    {t(item.subtitle)}
+                  </span>
                 </div>
               </div>
             ))}
