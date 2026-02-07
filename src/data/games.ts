@@ -12,12 +12,12 @@ export const games: GameProject[] = [
       en: 'AI-Driven Dating Show Game',
     },
     period: {
-      zh: '2024.09 - 至今',
-      en: '2024.09 - Present',
+      zh: '2025.06 - 至今',
+      en: '2025.06 - Present',
     },
     description: {
-      zh: '一款创新的AI驱动恋爱综艺游戏，玩家作为节目导演，通过设计关卡和调整NPC性格，影响恋综走向。游戏采用LLM技术实现智能对话系统，让每个角色都拥有独特的性格和反应。',
-      en: 'An innovative AI-driven dating show game where players act as the show director, designing challenges and adjusting NPC personalities to influence the show\'s direction. Features an LLM-powered dialogue system that gives each character unique personalities and reactions.',
+      zh: 'AI驱动的恋综修罗场：化身导演操控嘉宾，在不可控的即兴互动中制造“抓马”剧情，收割全网流量。负责核心程序实现，并参与所有游戏设计决策。',
+      en: 'AI-driven dating-show mayhem: direct contestants and orchestrate improvised drama to fuel viral moments. Responsible for core programming and all game design decisions.',
     },
     achievements: [
       {
@@ -25,7 +25,7 @@ export const games: GameProject[] = [
         en: 'Winner of Tencent Game Competition 2025 AI Gameplay Award',
       },
     ],
-    tags: ['Unity', 'C#', 'AI/LLM', 'Dating Sim'],
+    tags: ['Unity', 'C#', 'AI/LLM', 'Narrative'],
     status: {
       zh: '开发中',
       en: 'In Development',
@@ -42,23 +42,19 @@ export const games: GameProject[] = [
       en: 'Home Decoration Adventure',
     },
     period: {
-      zh: '2024.10 - 2024.11',
-      en: '2024.10 - 2024.11',
+      zh: '2025.12 - 至今',
+      en: '2025.12 - Present',
     },
     description: {
-      zh: '一款温馨的家装冒险游戏，玩家扮演一只小虫子，通过收集材料和解谜来装饰自己的家。作为6人团队的制作人，负责整体项目管理、游戏设计和部分编程工作。',
-      en: 'A cozy home decoration adventure where players control a little bug collecting materials and solving puzzles to decorate their home. Led a 6-person team as producer, overseeing project management, game design, and programming.',
+      zh: '温情的装修冒险：在危险的丛林中搜集资源，为水獭家族等小动物装修梦想之家，建立跨种族的羁绊。负责核心程序，实现装修+搜打撤核心玩法并制作原型，组建六人团队并主导敏捷开发。',
+      en: 'Heartwarming renovation adventure: gather resources in a dangerous forest to renovate dream homes for otter families and other animals, building cross-species bonds. Responsible for core programming and the decorate-plus-scavenge-and-retreat loop, built the prototype, formed a six-person team, and led agile delivery.',
     },
-    tags: ['Unity', 'C#', 'Team Lead', 'Puzzle'],
-    links: [
-      {
-        label: {
-          zh: '游戏页面',
-          en: 'Game Page',
-        },
-        url: 'https://itch.io/bug-decor',
-      },
-    ],
+    tags: ['Unity', 'C#', 'Team Lead'],
+    status: {
+      zh: '开发中',
+      en: 'In Development',
+    },
+    links: [],
   },
   {
     id: 'not-again-hero',
@@ -71,17 +67,17 @@ export const games: GameProject[] = [
       en: 'Narrative Puzzle Game',
     },
     period: {
-      zh: '2024.08',
-      en: '2024.08',
+      zh: '2025.07',
+      en: '2025.07',
     },
     description: {
-      zh: '为GMTK Game Jam 2024创作的叙事解谜游戏。玩家扮演一位厌倦了重复拯救世界的英雄，通过打破常规和创造性思维解决谜题。游戏探讨了英雄疲劳和自我认知的主题。',
-      en: 'A narrative puzzle game created for GMTK Game Jam 2024. Players control a hero tired of repeatedly saving the world, solving puzzles through unconventional thinking and creativity. Explores themes of hero fatigue and self-awareness.',
+      zh: '童话风叙事解谜：重组剧情卡片，在无限循环的英雄剧本中寻找逃离幻想的真相。负责程序并独立设计核心叙事诡计。',
+      en: 'Fairy-tale narrative puzzle: reassemble story cards to break out of an endlessly looping hero script and uncover the truth. Implemented programming and designed the central narrative twist.',
     },
     achievements: [
       {
-        zh: 'GMTK2025 叙事排名前1%',
-        en: 'Top 1% in Narrative Ranking at GMTK2025',
+        zh: 'GMTK2025 叙事性排名#141/9562（前1%）',
+        en: 'GMTK2025 Narrative rank #141/9562 (top 1%)',
       },
     ],
     tags: ['Unity', 'C#', 'Game Jam', 'Narrative'],
@@ -91,7 +87,7 @@ export const games: GameProject[] = [
           zh: 'itch.io',
           en: 'itch.io',
         },
-        url: 'https://itch.io/not-again-hero',
+        url: 'https://scheminghare.itch.io/not-again-hero',
       },
     ],
   },
@@ -106,27 +102,27 @@ export const games: GameProject[] = [
       en: 'Platform Puzzle Game',
     },
     period: {
-      zh: '2024.07',
-      en: '2024.07',
+      zh: '2025.10',
+      en: '2025.10',
     },
     description: {
-      zh: '一款创意十足的平台解谜游戏，玩家需要利用游戏中的"错误"和"bug"来通关。游戏巧妙地将编程错误转化为游戏机制，提供独特的解谜体验。',
-      en: 'A creative platform puzzle game where players must utilize in-game "errors" and "bugs" to progress. Cleverly transforms programming errors into game mechanics for a unique puzzle experience.',
+      zh: '平台跳跃解密：程序员半夜加班写代码竟然把自己写进电脑里了！？穿越Bug世界，修复代码逃出程序！',
+      en: 'Platforming puzzle: a programmer codes late at night and gets trapped inside the computer; traverse the bug world and fix code to escape.',
     },
     achievements: [
       {
-        zh: '55次下载，平均评分10/10',
-        en: '55 downloads with 10/10 rating',
+        zh: '55人下载试玩，评分10/10',
+        en: '55 downloads, rating 10/10',
       },
     ],
     tags: ['Unity', 'C#', 'Puzzle', 'Meta'],
     links: [
       {
         label: {
-          zh: 'itch.io',
-          en: 'itch.io',
+          zh: 'TapTap',
+          en: 'TapTap',
         },
-        url: 'https://itch.io/error-guide',
+        url: 'https://www.taptap.cn/app/780672?os=pc',
       },
     ],
   },
@@ -141,12 +137,12 @@ export const games: GameProject[] = [
       en: 'Party Battle Game',
     },
     period: {
-      zh: '2024.06',
-      en: '2024.06',
+      zh: '2024.10 - 2025.02',
+      en: '2024.10 - 2025.02',
     },
     description: {
-      zh: '一款搞笑的多人派对对战游戏，玩家通过独特的"放屁"机制进行竞技。作为独立开发者完成了游戏的全部设计、编程和美术工作。',
-      en: 'A humorous multiplayer party battle game where players compete using unique "flatulence" mechanics. Solo developer responsible for all design, programming, and art.',
+      zh: '无厘头乱斗派对：上演“有屁快放”的抢食大战！利用连环屁、火箭屁轰飞对手，在混乱中争夺冠军。独立设计与开发，完成程序、美术、音效。',
+      en: 'Absurd brawler party: chaotic food fight powered by chained and rocket farts to knock rivals away. Solo-created: design, code, art, and audio.',
     },
     tags: ['Unity', 'C#', 'Multiplayer', 'Solo Dev'],
     links: [
@@ -155,7 +151,7 @@ export const games: GameProject[] = [
           zh: 'itch.io',
           en: 'itch.io',
         },
-        url: 'https://itch.io/farty-party',
+        url: 'https://scheminghare.itch.io/farty-party',
       },
     ],
   },

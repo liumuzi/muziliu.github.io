@@ -8,17 +8,18 @@ export const research: ResearchProject[] = [
       en: 'Lexicon Coordination Game using Reinforcement Learning',
     },
     period: {
-      zh: '2019.01 - 2019.07',
-      en: '2019.01 - 2019.07',
+      zh: '2018.01 - 2019.07',
+      en: '2018.01 - 2019.07',
     },
     institution: {
       zh: '香港中文大学',
       en: 'The Chinese University of Hong Kong',
     },
     description: {
-      zh: '研究多智能体系统中的语言涌现问题，使用强化学习方法训练智能体在协调游戏中发展出共享的词汇系统。探索了不同网络结构和奖励机制对语言形成的影响。',
-      en: 'Investigated language emergence in multi-agent systems, using reinforcement learning to train agents to develop shared lexicon in coordination games. Explored the impact of different network architectures and reward mechanisms on language formation.',
+      zh: '在语汇合作游戏中提出新的强化学习方法，发现网络中的局部语汇共识会阻碍整体语汇共识。',
+      en: 'Proposed a new reinforcement learning approach for the lexicon coordination game and found local consensus in networks can hinder global consensus.',
     },
+    links: [],
     publication: {
       title: {
         zh: 'Lexicon Coordination Game: A Study on Language Emergence using Reinforcement Learning',
@@ -30,7 +31,7 @@ export const research: ResearchProject[] = [
         en: 'International Conference on Artificial Intelligence and Soft Computing (ICAISC 2020)',
       },
       year: 2020,
-      url: 'https://link.springer.com/chapter/10.1007/978-3-030-61401-0_52',
+      url: 'https://dl.acm.org/doi/abs/10.1007/978-3-030-61401-0_64',
     },
   },
   {
@@ -40,23 +41,27 @@ export const research: ResearchProject[] = [
       en: 'Exercise Is Medicine (EIM) - Wearable Position Detection',
     },
     period: {
-      zh: '2018.09 - 2019.06',
-      en: '2018.09 - 2019.06',
+      zh: '2019.05 - 2019.09',
+      en: '2019.05 - 2019.09',
     },
     institution: {
       zh: '香港中文大学',
       en: 'The Chinese University of Hong Kong',
     },
     description: {
-      zh: '开发基于LSTM的深度学习模型，用于识别可穿戴传感器的佩戴位置。处理加速度计和陀螺仪数据，实现高精度的位置分类，为运动健康监测提供技术支持。',
-      en: 'Developed LSTM-based deep learning models to identify wearable sensor placement positions. Processed accelerometer and gyroscope data to achieve high-accuracy position classification, supporting exercise and health monitoring applications.',
+      zh: '训练LSTM神经网络检测运动手环佩戴位置，提升运动量估算的准确度。',
+      en: 'Trained LSTM models to detect wearable placement and improve exercise volume estimation accuracy.',
     },
-    achievements: [
+    links: [
       {
-        zh: '位置识别准确率达到92%以上',
-        en: 'Achieved 92%+ accuracy in position recognition',
+        label: {
+          zh: '项目官网',
+          en: 'Project Page',
+        },
+        url: 'http://www.eim.hk/',
       },
     ],
+    achievements: [],
   },
   {
     id: 'funtomove',
@@ -65,16 +70,25 @@ export const research: ResearchProject[] = [
       en: 'FunToMove @ JC - Backend Development',
     },
     period: {
-      zh: '2018.01 - 2018.12',
-      en: '2018.01 - 2018.12',
+      zh: '2019.01 - 2019.07',
+      en: '2019.01 - 2019.07',
     },
     institution: {
       zh: '香港中文大学',
       en: 'The Chinese University of Hong Kong',
     },
     description: {
-      zh: '为运动健康应用开发RESTful API后端服务，负责数据库设计、用户认证、数据分析等核心功能。使用Python Flask框架构建高性能的API服务。',
-      en: 'Developed RESTful API backend for fitness and health application, responsible for database design, user authentication, and data analytics. Built high-performance API services using Python Flask framework.',
+      zh: '使用 TypeORM 和 MSSQL 数据库，开发后端 RESTful API。',
+      en: 'Built RESTful APIs with TypeORM and MSSQL.',
     },
+    links: [
+      {
+        label: {
+          zh: '项目官网',
+          en: 'Project Page',
+        },
+        url: 'https://funtomove-jc.hk/zh/',
+      },
+    ],
   },
 ];

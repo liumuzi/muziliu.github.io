@@ -46,13 +46,7 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <button
-            onClick={() => scrollToSection(SECTIONS.HERO)}
-            className="font-mono text-lg font-bold text-black hover:text-gray-600 transition-colors border border-black px-3 py-1"
-          >
-            ML
-          </button>
+          <div />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-0">

@@ -39,6 +39,10 @@ export interface ResearchProject {
   period: BilingualText;
   institution: BilingualText;
   description: BilingualText;
+  links?: {
+    label: BilingualText;
+    url: string;
+  }[];
   achievements?: BilingualText[];
   publication?: {
     title: BilingualText;

@@ -13,7 +13,7 @@ export function Footer() {
           <div>
             <p className="font-mono text-3xl font-bold mb-2">ML</p>
             <p className="font-mono text-sm text-gray-400">
-              {language === 'zh' ? '刘木子' : 'MUZI LIU'}
+              {language === 'zh' ? '刘 木子' : 'MUZI LIU'}
             </p>
           </div>
           <div className="border-l-3 border-primary pl-4">
@@ -25,7 +25,7 @@ export function Footer() {
           <div className="border-l-3 border-primary pl-4">
             <p className="font-mono text-xs text-gray-400 uppercase mb-2">// COPYRIGHT</p>
             <p className="font-sans text-sm text-white">
-              © 2024 {language === 'zh' ? '刘木子' : 'MUZI LIU'}
+              © 2024 {language === 'zh' ? '刘 木子' : 'MUZI LIU'}
             </p>
           </div>
         </div>

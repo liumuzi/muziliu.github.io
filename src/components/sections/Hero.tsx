@@ -33,7 +33,7 @@ export function Hero() {
     {
       period: { zh: '2021.02 - 2024.09', en: '2021.02 - 2024.09' },
       title: { zh: '图形算法工程师', en: 'GRAPHICS ALGO ENG' },
-      subtitle: { zh: '米哈游 / 原神', en: 'MIHOYO / GENSHIN' },
+      subtitle: { zh: '米哈游', en: 'MIHOYO' },
       index: '02',
     },
     {
@@ -95,7 +95,7 @@ export function Hero() {
           {/* Header: Name */}
           <div className="px-5 pt-8 pb-4 border-b border-black">
             <h1 className="text-[3.5rem] leading-none font-black tracking-tighter text-gray-900 uppercase whitespace-nowrap overflow-hidden">
-              {language === 'zh' ? '刘木子' : 'MUZI LIU'}
+              {language === 'zh' ? '刘 木子' : 'MUZI LIU'}
             </h1>
           </div>
 

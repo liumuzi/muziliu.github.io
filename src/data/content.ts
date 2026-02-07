@@ -2,7 +2,7 @@ import { PersonalInfo } from '@/types/content';
 
 export const personalInfo: PersonalInfo = {
   name: {
-    zh: '刘木子',
+    zh: '刘 木子',
     en: 'Muzi Liu',
   },
   title: {
@@ -22,12 +22,12 @@ export const personalInfo: PersonalInfo = {
   links: [
     {
       label: 'GitHub',
-      url: 'https://github.com/muziliu',
+      url: 'https://github.com/liumuzi',
       icon: 'github',
     },
     {
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/muziliu',
+      url: 'https://www.linkedin.com/in/muzi-liu-7337b1258',
       icon: 'linkedin',
     },
   ],

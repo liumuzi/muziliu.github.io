@@ -26,8 +26,8 @@ export const experience: ExperienceItem[] = [
           en: 'Lip-Sync Animation Algorithm',
         },
         description: {
-          zh: '基于Kaldi语音识别框架开发了自动口型生成系统，应用于《原神》等游戏项目。系统实现了从音频到动画的完整pipeline，大幅提升了动画制作效率。',
-          en: 'Developed an automatic lip-sync generation system based on Kaldi speech recognition framework, deployed in Genshin Impact and other projects. Implemented a complete audio-to-animation pipeline that significantly improved animation production efficiency.',
+          zh: '维护人声学到口型的Kaldi管线：配音转文字与音素时长对齐，后处理后驱动口型blendshape，支持多语言口型生成。',
+          en: 'Maintained a Kaldi-based pipeline from speech to lip shapes: speech-to-text with phoneme alignment, post-processing to drive blendshapes, supporting multiple languages.',
         },
         achievements: [
           {
@@ -46,15 +46,10 @@ export const experience: ExperienceItem[] = [
           en: 'Facial Expression Generation',
         },
         description: {
-          zh: '开发了基于音频情感识别的表情生成系统，自动分析语音情感并生成对应的角色表情动画。结合深度学习和传统信号处理技术，实现了高质量的表情动画生成。',
-          en: 'Developed an emotion recognition-based facial expression generation system that automatically analyzes speech emotions and generates corresponding character expressions. Combined deep learning with traditional signal processing for high-quality animation generation.',
+          zh: '基于模型完成语音情绪识别，并与动画师协作按音频区间生成表情动画。独立负责情绪识别模块和标签体系优化，参与动画生成工程实现规则化pose排布。',
+          en: 'Built speech emotion recognition and collaborated with animators to generate expressions by audio segments. Owned emotion module and label scheme refinement; contributed to rule-based pose layout for animation generation.',
         },
-        achievements: [
-          {
-            zh: '提升表情动画制作效率50%以上',
-            en: 'Improved expression animation production efficiency by over 50%',
-          },
-        ],
+        achievements: [],
       },
       {
         title: {
@@ -62,15 +57,10 @@ export const experience: ExperienceItem[] = [
           en: 'Motion Matching Algorithm',
         },
         description: {
-          zh: '研发基于LLM的动作标签系统，实现智能动作检索和匹配。通过自然语言描述快速查找和匹配动画资产，大幅提升动画师工作效率。',
-          en: 'Developed an LLM-based action tagging system for intelligent motion retrieval and matching. Enabled quick animation asset search and matching through natural language descriptions, significantly improving animator productivity.',
+          zh: '基于LLM为台词生成动作标签，构建台词-动作自动匹配流程；收集数据并调优prompt，提升标签一致性，减少策划配置剧情动画的工作量。',
+          en: 'Generated action tags from lines using LLMs and built automatic line-to-action matching; gathered data and tuned prompts to improve consistency and reduce planners’ workload.',
         },
-        achievements: [
-          {
-            zh: '动作检索准确率达到85%以上',
-            en: 'Achieved 85%+ accuracy in motion retrieval',
-          },
-        ],
+        achievements: [],
       },
     ],
   },
@@ -99,15 +89,10 @@ export const experience: ExperienceItem[] = [
           en: 'League of Legends Mobile NPC Algorithm',
         },
         description: {
-          zh: '参与《英雄联盟手游》的NPC智能算法开发，基于OpenAI Five的PPO算法实现游戏AI。负责训练环境搭建、奖励函数设计和模型训练优化。',
-          en: 'Contributed to NPC AI algorithm development for League of Legends Mobile, implementing game AI based on OpenAI Five\'s PPO algorithm. Responsible for training environment setup, reward function design, and model training optimization.',
+          zh: '主导搭建监督学习训练流程，复现OpenAI Five核心方法；完善MOBA Demo训练环境，丰富对战场景支持Agent训练；使用PPO训练并调优智能体。',
+          en: 'Led supervised training pipeline reproducing OpenAI Five methods; enhanced MOBA demo environment with varied battle scenarios; trained and tuned agents with PPO.',
         },
-        achievements: [
-          {
-            zh: '实现了基础的5v5对战AI原型',
-            en: 'Implemented prototype for 5v5 battle AI',
-          },
-        ],
+        achievements: [],
       },
     ],
   },

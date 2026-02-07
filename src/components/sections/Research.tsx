@@ -50,6 +50,22 @@ export function Research() {
                   </ul>
                 )}
 
+                {project.links && project.links.length > 0 && (
+                  <div className="flex flex-wrap gap-3">
+                    {project.links.map((link, lidx) => (
+                      <a
+                        key={lidx}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block border border-gray-300 bg-white px-3 py-1 font-mono text-[10px] font-bold uppercase hover:bg-black hover:text-white hover:border-black transition-all"
+                      >
+                        {t(link.label)} →
+                      </a>
+                    ))}
+                  </div>
+                )}
+
                 {project.publication && (
                   <div className="bg-gray-100 border border-gray-300 p-4 mt-3">
                     <p className="text-xs font-bold text-black uppercase mb-2 font-mono">
