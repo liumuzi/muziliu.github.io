@@ -24,6 +24,10 @@ export const games: GameProject[] = [
         zh: '荣获腾讯游戏创作大赛2025 AI玩法创作奖',
         en: 'Winner of Tencent Game Creation Competition 2025 AI Gameplay Innovation Award',
       },
+      {
+        zh: '小红书爆款报道均赞1.6k+；游研社、LitGate等报道',
+        en: 'Viral Xiaohongshu coverage avg 1.6k+ likes; featured by Gaming Society, LitGate, etc.',
+      },
     ],
     tags: ['Unity', 'C#', 'AI/LLM', 'Narrative'],
     status: {
@@ -31,6 +35,28 @@ export const games: GameProject[] = [
       en: 'In Development',
     },
     image: '/images/games/dating-show.png',
+    socialMetrics: {
+      platform: {
+        zh: '小红书',
+        en: 'Xiaohongshu',
+      },
+      views: {
+        zh: '3.5w',
+        en: '35k',
+      },
+      likes: {
+        zh: '3.8k+',
+        en: '3.8k+',
+      },
+      saves: {
+        zh: '3.8k+',
+        en: '3.8k+',
+      },
+      followers: {
+        zh: '1k+',
+        en: '1k+',
+      },
+    },
   },
   {
     id: 'bug-decor',

@@ -33,18 +33,41 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         
         {/* Content */}
         <div className={`space-y-2.5 flex flex-col flex-1 ${featured ? 'p-8' : 'p-6'}`}>
-          {/* Header with status */}
-          <div className="flex items-start justify-between gap-3 border-b border-gray-200 pb-3">
-            <div className="flex-1">
-              <h3 className={`font-bold text-gray-900 uppercase tracking-tight leading-tight ${featured ? 'text-2xl' : 'text-xl'}`}>
-                {t(project.title)}
-              </h3>
-              <p className={`text-gray-600 mt-1 font-mono ${featured ? 'text-sm' : 'text-xs'}`}>{t(project.subtitle)}</p>
+          {/* Header */}
+          <div className="border-b border-gray-200 pb-3">
+            <div className="flex items-start justify-between gap-3 mb-2">
+              <div className="flex-1">
+                <h3 className={`font-bold text-gray-900 uppercase tracking-tight leading-tight ${featured ? 'text-2xl' : 'text-xl'}`}>
+                  {t(project.title)}
+                </h3>
+                <p className={`text-gray-600 mt-1 font-mono ${featured ? 'text-sm' : 'text-xs'}`}>{t(project.subtitle)}</p>
+              </div>
+              {project.status && (
+                <div className="border border-gray-800 bg-gray-100 px-2 py-1.5 flex-shrink-0 flex items-center">
+                  <span className="font-mono text-[10px] font-bold text-gray-900 uppercase leading-none">
+                    {t(project.status)}
+                  </span>
+                </div>
+              )}
             </div>
-            {project.status && (
-              <div className="border border-gray-800 bg-gray-100 px-2 py-1.5 flex-shrink-0 flex items-center">
-                <span className="font-mono text-[10px] font-bold text-gray-900 uppercase leading-none">
-                  {t(project.status)}
+            {project.socialMetrics && (
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] font-mono text-gray-600 font-bold uppercase">
+                <span className="text-gray-500">{t(project.socialMetrics.platform)}</span>
+                <span className="text-gray-400">|</span>
+                <span>
+                  <span className="text-gray-900">{t(project.socialMetrics.views)}</span> {t({ zh: '浏览', en: 'Views' })}
+                </span>
+                <span className="text-gray-400">|</span>
+                <span>
+                  <span className="text-gray-900">{t(project.socialMetrics.likes)}</span> {t({ zh: '点赞', en: 'Likes' })}
+                </span>
+                <span className="text-gray-400">|</span>
+                <span>
+                  <span className="text-gray-900">{t(project.socialMetrics.saves)}</span> {t({ zh: '收藏', en: 'Saves' })}
+                </span>
+                <span className="text-gray-400">|</span>
+                <span>
+                  <span className="text-gray-900">{t(project.socialMetrics.followers)}</span> {t({ zh: '粉丝', en: 'Followers' })}
                 </span>
               </div>
             )}

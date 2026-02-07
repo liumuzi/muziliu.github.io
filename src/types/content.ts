@@ -17,6 +17,13 @@ export interface GameProject {
   }[];
   image?: string;
   status?: BilingualText;
+  socialMetrics?: {
+    platform: BilingualText;
+    views: BilingualText;
+    likes: BilingualText;
+    saves: BilingualText;
+    followers: BilingualText;
+  };
 }
 
 export interface ExperienceItem {
