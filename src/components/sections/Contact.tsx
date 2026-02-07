@@ -10,7 +10,7 @@ export function Contact() {
   const { t } = useLanguage();
 
   return (
-    <section id={SECTIONS.CONTACT} className="py-20 bg-white">
+    <section id={SECTIONS.CONTACT} className="py-24 bg-gray-100">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '联系方式', en: 'CONTACT' }}
@@ -20,7 +20,7 @@ export function Contact() {
           }}
         />
 
-        <div className="border border-black bg-white shadow-[4px_4px_0px_0px_rgba(0,0,0,0.3)] p-8 max-w-4xl">
+        <div className="border-2 border-gray-800 bg-white brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 p-8 max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div className="border-l-3 border-black pl-4">
               <p className="font-mono text-[10px] text-gray-500 mb-2 uppercase font-bold">
@@ -57,7 +57,7 @@ export function Contact() {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-gray-300 bg-white px-4 py-2 font-mono font-bold text-xs uppercase hover:bg-black hover:text-white hover:border-black transition-all"
+                  className="border border-black bg-white px-4 py-2 font-mono font-bold text-xs uppercase hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200"
                 >
                   {link.label}
                 </a>

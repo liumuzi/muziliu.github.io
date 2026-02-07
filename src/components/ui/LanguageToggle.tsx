@@ -8,14 +8,14 @@ export function LanguageToggle() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center gap-0 border border-gray-300 bg-white/80 backdrop-blur shadow-sm">
+    <div className="flex items-center gap-1">
       <button
         onClick={() => setLanguage('zh')}
         className={cn(
-          'px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wide transition-colors border-r border-gray-200',
+          'px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider transition-all duration-200',
           language === 'zh'
-            ? 'bg-black text-white shadow'
-            : 'text-gray-700 hover:text-black'
+            ? 'bg-gray-900 text-white'
+            : 'bg-white text-gray-800 hover:bg-gray-100'
         )}
       >
         中文
@@ -23,10 +23,10 @@ export function LanguageToggle() {
       <button
         onClick={() => setLanguage('en')}
         className={cn(
-          'px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wide transition-colors',
+          'px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider transition-all duration-200',
           language === 'en'
-            ? 'bg-black text-white shadow'
-            : 'text-gray-700 hover:text-black'
+            ? 'bg-gray-900 text-white'
+            : 'bg-white text-gray-800 hover:bg-gray-100'
         )}
       >
         EN

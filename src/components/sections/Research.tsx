@@ -10,7 +10,7 @@ export function Research() {
   const { t } = useLanguage();
 
   return (
-    <section id={SECTIONS.RESEARCH} className="py-20 bg-white">
+    <section id={SECTIONS.RESEARCH} className="py-24 bg-white border-b-2 border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '研究项目', en: 'RESEARCH' }}
@@ -22,7 +22,7 @@ export function Research() {
 
         <div className="space-y-6 max-w-4xl">
           {research.map((project) => (
-            <div key={project.id} className="bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)] p-6">
+            <div key={project.id} className="bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow hover:-translate-y-0.5 transition-all duration-200 p-6">
               <div className="space-y-3">
                 <div className="border-b border-gray-200 pb-3">
                   <h3 className="text-lg font-bold text-black uppercase tracking-tight">
@@ -58,7 +58,7 @@ export function Research() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block border border-gray-300 bg-white px-3 py-1 font-mono text-[10px] font-bold uppercase hover:bg-black hover:text-white hover:border-black transition-all"
+                        className="inline-block border border-gray-800 bg-white px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200"
                       >
                         {t(link.label)} →
                       </a>
@@ -85,7 +85,7 @@ export function Research() {
                         href={project.publication.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block border border-gray-300 bg-white px-3 py-1 font-mono text-[10px] font-bold uppercase hover:bg-black hover:text-white hover:border-black transition-all mt-2"
+                        className="inline-block border border-gray-800 bg-white px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 mt-2"
                       >
                         {t({ zh: '查看论文', en: 'VIEW PAPER' })} →
                       </a>

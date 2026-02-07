@@ -38,7 +38,7 @@ const config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-sans)', 'Helvetica', 'Arial', 'sans-serif'],
+        sans: ['var(--font-noto-sc)', 'var(--font-sans)', 'Helvetica', 'Arial', 'sans-serif'],
         mono: ['var(--font-mono)', 'Courier', 'monospace'],
       },
       fontSize: {

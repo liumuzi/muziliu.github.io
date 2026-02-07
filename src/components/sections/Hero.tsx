@@ -59,7 +59,7 @@ export function Hero() {
   return (
     <section
       id={SECTIONS.HERO}
-      className="min-h-screen flex items-center p-4 sm:p-10 bg-gray-200 relative overflow-hidden"
+      className="min-h-screen flex items-center p-4 sm:p-10 bg-gray-100 relative overflow-hidden"
     >
       {/* Background diagonal line */}
       <div
@@ -73,29 +73,29 @@ export function Hero() {
       {/* Left aligned container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* Main card container - left aligned */}
-        <div className="relative bg-white border border-black shadow-2xl w-full max-w-[420px] flex flex-col h-[85vh] max-h-[700px]">
+        <div className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col h-[85vh] max-h-[700px]">
           {/* Corner crosshairs */}
           <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none z-20">
-            <div className="absolute top-1 left-0 w-full h-[1px] bg-black" />
-            <div className="absolute left-1 top-0 h-full w-[1px] bg-black" />
+            <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
+            <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
           </div>
           <div className="absolute top-2 right-2 w-2.5 h-2.5 pointer-events-none z-20">
-            <div className="absolute top-1 left-0 w-full h-[1px] bg-black" />
-            <div className="absolute left-1 top-0 h-full w-[1px] bg-black" />
+            <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
+            <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
           </div>
           <div className="absolute bottom-2 left-2 w-2.5 h-2.5 pointer-events-none z-20">
-            <div className="absolute top-1 left-0 w-full h-[1px] bg-black" />
-            <div className="absolute left-1 top-0 h-full w-[1px] bg-black" />
+            <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
+            <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
           </div>
           <div className="absolute bottom-2 right-2 w-2.5 h-2.5 pointer-events-none z-20">
-            <div className="absolute top-1 left-0 w-full h-[1px] bg-black" />
-            <div className="absolute left-1 top-0 h-full w-[1px] bg-black" />
+            <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
+            <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
           </div>
 
           {/* Header: Name */}
-          <div className="px-5 pt-8 pb-4 border-b border-black">
-            <h1 className="text-[3.5rem] leading-none font-black tracking-tighter text-gray-900 uppercase whitespace-nowrap overflow-hidden">
-              {language === 'zh' ? '刘 木子' : 'MUZI LIU'}
+          <div className="px-5 pt-8 pb-4 border-b-2 border-gray-800">
+            <h1 className="text-[4rem] leading-none font-black tracking-tighter text-gray-900 uppercase whitespace-nowrap overflow-hidden">
+              {language === 'zh' ? '刘木子' : 'MUZI LIU'}
             </h1>
           </div>
 
@@ -122,17 +122,17 @@ export function Hero() {
           </div>
 
           {/* Bottom buttons */}
-          <div className="p-5 mt-auto border-t border-black bg-white">
+          <div className="p-5 mt-auto border-t border-gray-800 bg-white">
             <div className="grid grid-cols-2 gap-3 font-mono text-[11px]">
               <button
                 onClick={scrollToContact}
-                className="border border-gray-300 py-2 px-4 text-center uppercase tracking-wider text-black font-bold hover:bg-black hover:text-white transition-all"
+                className="border border-gray-800 py-2 px-4 text-center uppercase tracking-wider text-gray-900 font-bold hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200"
               >
                 {t({ zh: '联系', en: 'CONTACT' })}
               </button>
               <button
                 onClick={scrollToAbout}
-                className="border border-gray-300 py-2 px-4 text-center uppercase tracking-wider text-black font-bold hover:bg-black hover:text-white transition-all flex items-center justify-center gap-2"
+                className="border border-gray-800 py-2 px-4 text-center uppercase tracking-wider text-gray-900 font-bold hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2"
               >
                 {t({ zh: '作品集', en: 'PORTFOLIO' })}
                 <span className="text-[9px] transform -rotate-45">→</span>
@@ -143,14 +143,14 @@ export function Hero() {
       </div>
 
       {/* Floating social icons */}
-      <div className="fixed bottom-6 right-6 z-20 flex flex-col gap-0 bg-white border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,0.2)]">
+      <div className="fixed bottom-6 right-6 z-20 flex flex-col gap-0 bg-white border border-gray-800 brutalist-shadow-sm">
         {personalInfo.links.map((link, idx) => (
           <a
             key={idx}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-9 h-9 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all border-b border-gray-200 last:border-0"
+            className="w-9 h-9 flex items-center justify-center text-gray-900 hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 border-b border-gray-200 last:border-0"
             title={link.label}
           >
             <span className="font-mono text-xs font-bold">
@@ -160,7 +160,7 @@ export function Hero() {
         ))}
         <a
           href={`mailto:${personalInfo.email}`}
-          className="w-9 h-9 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all"
+          className="w-9 h-9 flex items-center justify-center text-gray-900 hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200"
           title="Email"
         >
           <span className="font-mono text-xs font-bold">@</span>

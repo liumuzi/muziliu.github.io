@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import { IBM_Plex_Sans, IBM_Plex_Mono, Noto_Sans_SC } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 
@@ -15,6 +15,13 @@ const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-mono',
   display: 'swap',
   weight: ['400', '500', '600', '700'],
+});
+
+const notoSansSC = Noto_Sans_SC({
+  subsets: ['latin'],
+  variable: '--font-noto-sc',
+  display: 'swap',
+  weight: ['400', '500', '700', '900'],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexMono.variable}`}>
+    <html lang="en" className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} ${notoSansSC.variable}`}>
       <body className="font-sans antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

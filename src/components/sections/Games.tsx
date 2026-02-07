@@ -8,7 +8,7 @@ import { SECTIONS } from '@/lib/constants';
 
 export function Games() {
   return (
-    <section id={SECTIONS.GAMES} className="py-20 bg-white">
+    <section id={SECTIONS.GAMES} className="py-24 bg-white border-b-2 border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           title={{ zh: '游戏作品', en: 'GAMES' }}

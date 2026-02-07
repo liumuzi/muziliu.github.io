@@ -13,7 +13,7 @@ export function TimelineItem({ item }: TimelineItemProps) {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-white border border-black shadow-2xl p-6">
+    <div className="bg-white border-2 border-black brutalist-shadow-sm hover:brutalist-shadow hover:-translate-y-0.5 transition-all duration-200 p-6">
       <div className="space-y-4">
         <div className="border-b border-gray-200 pb-4">
           <h3 className="text-2xl font-black text-black uppercase tracking-tight">{t(item.company)}</h3>
