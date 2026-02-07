@@ -45,12 +45,12 @@ export const games: GameProject[] = [
         en: '35k',
       },
       likes: {
-        zh: '3.8k+',
-        en: '3.8k+',
+        zh: '3107',
+        en: '3,107',
       },
       saves: {
-        zh: '3.8k+',
-        en: '3.8k+',
+        zh: '830',
+        en: '830',
       },
       followers: {
         zh: '1k+',
