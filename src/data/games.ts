@@ -76,6 +76,12 @@ export const games: GameProject[] = [
       zh: '温情的装修冒险：在危险的丛林中搜集资源，为水獭家族等小动物装修梦想之家，建立跨种族的羁绊。负责核心程序，实现装修+搜打撤核心玩法并制作原型，组建六人团队并主导敏捷开发。',
       en: 'Heartwarming renovation adventure: gather resources in a dangerous forest to renovate dream homes for otter families and other animals, building cross-species bonds. Responsible for core programming and the decorate-plus-scavenge-and-retreat loop, built the prototype, formed a six-person team, and led agile delivery.',
     },
+    achievements: [
+      {
+        zh: '荣获光子游戏大赛2026概念赛道银奖',
+        en: 'Silver Award, Concept Track, Photon Game Competition 2026',
+      },
+    ],
     tags: ['Unity', 'C#', 'Team Lead'],
     status: {
       zh: '开发中',
