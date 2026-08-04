@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { GameProject } from '@/types/content';
 
@@ -11,11 +12,17 @@ interface ProjectCardProps {
   featured?: boolean;
 }
 
-export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+export function ProjectCard({ project, delay = 0, featured = false }: ProjectCardProps) {
   const { t } = useLanguage();
 
   return (
-    <div className="group relative h-full">
+    <motion.div
+      className="group relative h-full"
+      initial={{ opacity: 0, y: 36 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
+    >
       <div className="h-full border-2 border-gray-800 bg-white brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 overflow-hidden flex flex-col">
         {/* Image */}
         {project.image && (
@@ -122,6 +129,6 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

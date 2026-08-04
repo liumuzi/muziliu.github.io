@@ -20,8 +20,8 @@ export function Experience() {
         />
 
         <div className="space-y-6 max-w-4xl">
-          {experience.map((item) => (
-            <TimelineItem key={item.id} item={item} />
+          {experience.map((item, index) => (
+            <TimelineItem key={item.id} item={item} delay={Math.min(index * 0.08, 0.24)} />
           ))}
         </div>
       </div>

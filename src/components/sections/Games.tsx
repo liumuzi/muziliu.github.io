@@ -21,7 +21,7 @@ export function Games() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {games.map((game, index) => (
             <div key={game.id} className={index === 0 ? 'md:col-span-2' : ''}>
-              <ProjectCard project={game} featured={index === 0} />
+              <ProjectCard project={game} featured={index === 0} delay={Math.min(index * 0.08, 0.24)} />
             </div>
           ))}
         </div>

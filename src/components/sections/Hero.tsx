@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { personalInfo } from '@/data/content';
 import { SECTIONS } from '@/lib/constants';
@@ -62,8 +63,11 @@ export function Hero() {
       className="min-h-screen flex items-center p-4 sm:p-10 bg-gray-100 relative overflow-hidden"
     >
       {/* Background diagonal line */}
-      <div
+      <motion.div
         className="absolute top-1/2 left-1/2 w-[200vw] h-[1px] bg-gray-300 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         style={{
           transform: 'translate(-50%, -50%) rotate(35deg)',
           zIndex: 0,
@@ -73,7 +77,12 @@ export function Hero() {
       {/* Left aligned container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         {/* Main card container - left aligned */}
-        <div className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col">
+        <motion.div
+          initial={{ opacity: 0, y: 32, rotate: -1 }}
+          animate={{ opacity: 1, y: 0, rotate: 0 }}
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col"
+        >
           {/* Corner crosshairs */}
           <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none z-20">
             <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
@@ -141,7 +150,7 @@ export function Hero() {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Floating social icons */}

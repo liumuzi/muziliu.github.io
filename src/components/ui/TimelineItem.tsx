@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ExperienceItem } from '@/types/content';
 
@@ -9,11 +10,17 @@ interface TimelineItemProps {
   delay?: number;
 }
 
-export function TimelineItem({ item }: TimelineItemProps) {
+export function TimelineItem({ item, delay = 0 }: TimelineItemProps) {
   const { t } = useLanguage();
 
   return (
-    <div className="bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow hover:-translate-y-0.5 transition-all duration-200 p-6">
+    <motion.div
+      initial={{ opacity: 0, x: -28 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.5, delay, ease: [0.22, 1, 0.36, 1] }}
+      className="bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow hover:-translate-y-0.5 transition-all duration-200 p-6"
+    >
       <div className="space-y-4">
         <div className="border-b border-gray-200 pb-4">
           <h3 className="text-2xl font-black text-gray-900 uppercase tracking-tight">{t(item.company)}</h3>
@@ -47,6 +54,6 @@ export function TimelineItem({ item }: TimelineItemProps) {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
