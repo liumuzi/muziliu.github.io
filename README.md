@@ -7,6 +7,7 @@ A modern, elegant portfolio website showcasing game development projects, algori
 - **Bilingual Support**: Seamless switching between Chinese (中文) and English
 - **Responsive Design**: Optimized for all screen sizes (mobile, tablet, desktop)
 - **Smooth Animations**: Scroll-triggered animations and micro-interactions using Framer Motion
+- **Short-form Journal**: Dated, bilingual notes presented as a compact social feed
 - **Modern Tech Stack**: Built with Next.js 14, TypeScript, and Tailwind CSS
 - **Static Export**: Fast, SEO-friendly static site generation
 - **Elegant UI**: Sophisticated minimalist design with refined typography
@@ -90,9 +91,12 @@ All content is managed through TypeScript files in `src/data/`:
 - `games.ts` - Game projects with achievements
 - `experience.ts` - Work experience timeline
 - `research.ts` - Research projects and publications
+- `journal.ts` - Dated short-form journal entries
 - `skills.ts` - Skills by category
 
 Content is bilingual (Chinese/English) using the `BilingualText` type.
+
+The journal is published as a separate `/journal/` page. Its entries are managed in `src/data/journal.ts`.
 
 ## 🚢 Deployment
 

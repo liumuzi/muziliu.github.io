@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { personalInfo } from '@/data/content';
@@ -74,15 +75,16 @@ export function Hero() {
         }}
       />
 
-      {/* Left aligned container */}
+      {/* Identity and entry cards */}
       <div className="relative z-10 w-full max-w-7xl mx-auto">
-        {/* Main card container - left aligned */}
-        <motion.div
-          initial={{ opacity: 0, y: 32, rotate: -1 }}
-          animate={{ opacity: 1, y: 0, rotate: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col"
-        >
+        <div className="flex flex-col md:flex-row md:items-end gap-6">
+          {/* Main identity card */}
+          <motion.div
+            initial={{ opacity: 0, y: 32, rotate: -1 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col"
+          >
           {/* Corner crosshairs */}
           <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none z-20">
             <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
@@ -132,25 +134,48 @@ export function Hero() {
             ))}
           </div>
 
-          {/* Bottom buttons */}
-          <div className="p-5 mt-auto border-t border-gray-800 bg-white">
-            <div className="grid grid-cols-2 gap-3 font-mono text-[11px]">
-              <button
-                onClick={scrollToContact}
-                className="border border-gray-800 py-2 px-4 text-center uppercase tracking-wider text-gray-900 font-bold hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200"
-              >
-                {t({ zh: '联系', en: 'CONTACT' })}
+          </motion.div>
+
+          {/* Separate entry card, bottom-aligned with the identity card */}
+          <motion.nav
+            aria-label={t({ zh: '个人入口', en: 'Personal links' })}
+            initial={{ opacity: 0, y: 32, rotate: 1 }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ duration: 0.7, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
+            className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] md:max-w-[280px] font-mono"
+          >
+            <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none">
+              <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
+              <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
+            </div>
+            <div className="absolute bottom-2 right-2 w-2.5 h-2.5 pointer-events-none">
+              <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
+              <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
+            </div>
+
+            <div className="px-5 pt-8 pb-4 border-b-2 border-gray-800">
+              <p className="text-[10px] text-gray-400 font-bold tracking-[0.2em] mb-1">// 05</p>
+              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">
+                {t({ zh: '入口', en: 'INDEX' })}
+              </h2>
+            </div>
+
+            <div className="text-xs font-bold uppercase tracking-wider">
+              <Link href="/journal/" className="group flex items-center justify-between px-5 py-4 border-b border-gray-300 hover:bg-gray-900 hover:text-white transition-colors">
+                <span>{t({ zh: '日志', en: 'JOURNAL' })}</span>
+                <span className="text-gray-400 group-hover:text-white">01 ↗</span>
+              </Link>
+              <button onClick={scrollToAbout} className="group w-full flex items-center justify-between px-5 py-4 border-b border-gray-300 hover:bg-gray-900 hover:text-white transition-colors">
+                <span>{t({ zh: '作品集', en: 'PORTFOLIO' })}</span>
+                <span className="text-gray-400 group-hover:text-white">02 ↓</span>
               </button>
-              <button
-                onClick={scrollToAbout}
-                className="border border-gray-800 py-2 px-4 text-center uppercase tracking-wider text-gray-900 font-bold hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2"
-              >
-                {t({ zh: '作品集', en: 'PORTFOLIO' })}
-                <span className="text-[9px] transform -rotate-45">→</span>
+              <button onClick={scrollToContact} className="group w-full flex items-center justify-between px-5 py-4 hover:bg-gray-900 hover:text-white transition-colors">
+                <span>{t({ zh: '联系', en: 'CONTACT' })}</span>
+                <span className="text-gray-400 group-hover:text-white">03 ↓</span>
               </button>
             </div>
-          </div>
-        </motion.div>
+          </motion.nav>
+        </div>
       </div>
 
       {/* Floating social icons */}

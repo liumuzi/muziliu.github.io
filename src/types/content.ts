@@ -80,4 +80,12 @@ export interface PersonalInfo {
   }[];
 }
 
+export interface JournalEntry {
+  id: string;
+  date: string;
+  title: BilingualText;
+  paragraphs: BilingualText[];
+  tags?: BilingualText[];
+}
+
 export type Language = 'zh' | 'en';
