@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
-const basePath = '/muziliu.github.io';
+// GitHub Pages hosts this project under a path; Vercel hosts it at the domain root.
+const basePath = process.env.GITHUB_ACTIONS === 'true' ? '/muziliu.github.io' : undefined;
 
 const nextConfig = {
   output: 'export',
-  basePath,
+  ...(basePath ? { basePath } : {}),
   env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_BASE_PATH: basePath ?? '',
   },
   images: {
     unoptimized: true,
