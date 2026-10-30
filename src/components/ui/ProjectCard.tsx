@@ -29,7 +29,7 @@ export function ProjectCard({ project, delay = 0, featured = false }: ProjectCar
         {project.image && (
           <div className={`relative w-full bg-gray-100 border-b-2 border-gray-800 overflow-hidden ${featured ? 'aspect-[2/1]' : 'aspect-video'}`}>
             <Image
-              src={project.image}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}${project.image}`}
               alt={t(project.title)}
               fill
               className={`object-cover transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none ${project.id === 'bug-decor' ? 'object-top' : 'object-center'}`}
