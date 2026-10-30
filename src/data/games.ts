@@ -59,6 +59,47 @@ export const games: GameProject[] = [
     },
   },
   {
+    id: 'wardrobe-shop',
+    title: {
+      zh: '我有一家服装店',
+      en: 'My Little Fashion Shop',
+    },
+    subtitle: {
+      zh: '换装与服装店经营游戏',
+      en: 'Fashion Styling & Boutique Management Game',
+    },
+    period: {
+      zh: '2026.09 - 至今',
+      en: '2026.09 - Present',
+    },
+    description: {
+      zh: '经营自己的服装店：挑选新款、为顾客搭配穿搭、讨价还价，并在挑战模式中管理成本与房贷。独立设计和开发，使用同一套游戏核心适配小红书小工具与 TapTap H5。',
+      en: 'Run a boutique: stock new styles, dress customers, negotiate prices, and manage costs and a mortgage in challenge mode. Independently designed and developed with one shared game core for Xiaohongshu and TapTap H5.',
+    },
+    achievements: [
+      {
+        zh: '小红书累计游玩 35 万人次',
+        en: '350,000 cumulative plays on Xiaohongshu',
+      },
+      {
+        zh: 'TapTap iOS 单日热门榜第 2 名',
+        en: '#2 on TapTap iOS daily trending chart',
+      },
+    ],
+    tags: ['HTML5', 'JavaScript', 'Game Design', 'Solo Dev'],
+    status: {
+      zh: '开发中',
+      en: 'In Development',
+    },
+    image: '/images/games/wardrobe-shop.jpg',
+    links: [
+      {
+        label: { zh: 'TapTap 游玩', en: 'Play on TapTap' },
+        url: 'https://www.taptap.cn/app/962572',
+      },
+    ],
+  },
+  {
     id: 'bug-decor',
     title: {
       zh: '虫虫家装',
@@ -81,13 +122,17 @@ export const games: GameProject[] = [
         zh: '荣获光子游戏大赛2026概念赛道银奖',
         en: 'Silver Award, Concept Track, Photon Game Competition 2026',
       },
+      {
+        zh: '上海 AIGC 国际大赛 AI 游戏赛道优秀作品奖',
+        en: 'Outstanding Work Award, AI Game Track, Shanghai International AIGC Competition',
+      },
     ],
     tags: ['Unity', 'C#', 'Team Lead'],
     status: {
       zh: '开发中',
       en: 'In Development',
     },
-    image: '/images/games/bug-decor.jpg',
+    image: '/images/games/bug-decor.webp',
     links: [],
   },
   {

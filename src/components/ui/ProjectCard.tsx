@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { GameProject } from '@/types/content';
 
@@ -14,51 +14,49 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, delay = 0, featured = false }: ProjectCardProps) {
   const { t } = useLanguage();
+  const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
       className="group relative h-full"
-      initial={{ opacity: 0, y: 36 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={reduceMotion ? false : { opacity: 0, y: 20 }}
+      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="h-full border-2 border-gray-800 bg-white brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 overflow-hidden flex flex-col">
+      <div className="flex h-full flex-col overflow-hidden border-2 border-gray-800 bg-white brutalist-shadow-sm">
         {/* Image */}
         {project.image && (
-          <div className={`relative w-full bg-gray-100 border-b-2 border-gray-800 overflow-hidden ${featured ? 'aspect-[21/9]' : 'aspect-video'}`}>
+          <div className={`relative w-full bg-gray-100 border-b-2 border-gray-800 overflow-hidden ${featured ? 'aspect-[2/1]' : 'aspect-video'}`}>
             <Image
               src={project.image}
               alt={t(project.title)}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority={project.id === 'dating-show'}
+              className={`object-cover transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none ${project.id === 'bug-decor' ? 'object-top' : 'object-center'}`}
+              sizes={featured ? '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 66vw' : '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw'}
+              priority={project.id === 'bug-decor'}
             />
           </div>
         )}
         
         {/* Content */}
-        <div className={`space-y-2.5 flex flex-col flex-1 ${featured ? 'p-8' : 'p-6'}`}>
+        <div className={`flex flex-1 flex-col ${featured ? 'gap-5 p-6 sm:p-8' : 'gap-4 p-5 sm:p-6'}`}>
           {/* Header */}
-          <div className="border-b border-gray-200 pb-3">
-            <div className="flex items-start justify-between gap-3 mb-2">
-              <div className="flex-1">
-                <h3 className={`font-bold text-gray-900 uppercase tracking-tight leading-tight ${featured ? 'text-2xl' : 'text-xl'}`}>
-                  {t(project.title)}
-                </h3>
-                <p className={`text-gray-600 mt-1 font-mono ${featured ? 'text-sm' : 'text-xs'}`}>{t(project.subtitle)}</p>
-              </div>
+          <div>
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-semibold text-gray-500">
+              <span>{t(project.period)}</span>
               {project.status && (
-                <div className="border border-gray-800 bg-gray-100 px-2 py-1.5 flex-shrink-0 flex items-center">
-                  <span className="font-mono text-[10px] font-bold text-gray-900 uppercase leading-none">
-                    {t(project.status)}
-                  </span>
-                </div>
+                <span className="border border-gray-800 bg-gray-100 px-2 py-1 text-[11px] font-bold leading-none text-gray-900">
+                  {t(project.status)}
+                </span>
               )}
             </div>
+            <h3 className={`font-bold leading-tight text-gray-900 ${featured ? 'text-3xl sm:text-4xl' : 'text-2xl'}`}>
+              {t(project.title)}
+            </h3>
+            <p className="mt-1.5 font-mono text-xs leading-relaxed text-gray-500 sm:text-sm">{t(project.subtitle)}</p>
             {project.socialMetrics && (
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] font-mono text-gray-600 font-bold uppercase">
+              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] font-semibold text-gray-600">
                 <span className="text-gray-500">{t(project.socialMetrics.platform)}</span>
                 <span className="text-gray-400">|</span>
                 <span>
@@ -80,31 +78,29 @@ export function ProjectCard({ project, delay = 0, featured = false }: ProjectCar
             )}
           </div>
 
-          <p className="font-mono text-[10px] text-gray-500 font-bold uppercase">{t(project.period)}</p>
-
           {/* Description */}
-          <p className={`text-gray-600 leading-snug flex-1 ${featured ? 'text-xs' : 'text-[11px]'}`}>
+          <p className={`max-w-[66ch] flex-1 leading-relaxed text-gray-600 ${featured ? 'text-base' : 'text-sm'}`}>
             {t(project.description)}
           </p>
 
           {/* Achievements */}
           {project.achievements && project.achievements.length > 0 && (
-            <div className="space-y-1.5 py-2.5 border-t border-gray-200">
+            <div className="space-y-2 border-t border-gray-200 pt-4">
               {project.achievements.map((achievement, idx) => (
-                <div key={idx} className={`flex items-start gap-2 ${featured ? 'text-sm' : 'text-xs'}`}>
-                  <span className="text-gray-800 font-bold mt-0.5">▸</span>
-                  <span className="text-gray-800 leading-snug font-medium">{t(achievement)}</span>
+                <div key={idx} className={`flex items-start gap-2 ${featured ? 'text-base' : 'text-sm'}`}>
+                  <span aria-hidden="true" className="mt-0.5 font-bold text-gray-800">▸</span>
+                  <span className="font-semibold leading-snug text-gray-900">{t(achievement)}</span>
                 </div>
               ))}
             </div>
           )}
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2 pt-1.5">
+          <div className="flex flex-wrap gap-1.5">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="border border-gray-300 px-2 py-1 text-[10px] font-mono font-bold uppercase bg-white hover:bg-gray-100 transition-colors"
+                className="border border-gray-200 bg-gray-50 px-2 py-1 font-mono text-[10px] font-semibold text-gray-600"
               >
                 {tag}
               </span>
@@ -113,14 +109,14 @@ export function ProjectCard({ project, delay = 0, featured = false }: ProjectCar
 
           {/* Links */}
           {project.links && project.links.length > 0 && (
-            <div className="flex gap-2 pt-2.5 border-t border-gray-200">
+            <div className="flex gap-2 border-t border-gray-200 pt-4">
               {project.links.map((link, idx) => (
                 <a
                   key={idx}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-gray-800 bg-white px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-wider hover:bg-gray-900 hover:text-white hover:-translate-y-0.5 transition-all duration-200"
+                  className="inline-flex min-h-10 items-center border border-gray-800 bg-white px-3 py-2 font-mono text-xs font-bold hover:bg-gray-900 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 transition-colors"
                 >
                   {t(link.label)} →
                 </a>

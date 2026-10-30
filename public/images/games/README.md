@@ -5,7 +5,7 @@
 每个游戏项目使用其 `id` 作为图片文件名：
 
 - `dating-show.jpg` - 我的恋综超失控
-- `bug-decor.jpg` - 虫虫家装
+- `bug-decor.webp` - 虫虫家装
 - `not-again-hero.jpg` - Not Again, Hero
 - `error-guide.jpg` - 报错漫游指南
 - `farty-party.jpg` - Farty Party
