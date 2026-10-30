@@ -24,23 +24,23 @@ export function ProjectCard({ project, delay = 0, featured = false }: ProjectCar
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.45, delay, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="flex h-full flex-col overflow-hidden border-2 border-gray-800 bg-white brutalist-shadow-sm">
+      <div className={`flex h-full flex-col overflow-hidden border-2 border-gray-800 bg-white brutalist-shadow-sm ${featured ? 'lg:min-h-[410px] lg:flex-row' : ''}`}>
         {/* Image */}
         {project.image && (
-          <div className={`relative w-full bg-gray-100 border-b-2 border-gray-800 overflow-hidden ${featured ? 'aspect-[2/1]' : 'aspect-video'}`}>
+          <div className={`relative w-full overflow-hidden border-b-2 border-gray-800 bg-gray-100 ${featured ? 'aspect-[2/1] lg:aspect-auto lg:w-[58%] lg:flex-none lg:border-b-0 lg:border-r-2' : 'aspect-video'}`}>
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}${project.image}`}
               alt={t(project.title)}
               fill
               className={`object-cover transition-transform duration-500 group-hover:scale-[1.025] motion-reduce:transform-none ${project.id === 'bug-decor' ? 'object-top' : 'object-center'}`}
-              sizes={featured ? '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 66vw' : '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw'}
+              sizes={featured ? '(max-width: 1024px) 100vw, 58vw' : '(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'}
               priority={project.id === 'bug-decor'}
             />
           </div>
         )}
         
         {/* Content */}
-        <div className={`flex flex-1 flex-col ${featured ? 'gap-5 p-6 sm:p-8' : 'gap-4 p-5 sm:p-6'}`}>
+        <div className={`flex flex-1 flex-col ${featured ? 'gap-5 p-6 sm:p-8 lg:w-[42%]' : 'gap-4 p-5 sm:p-6'}`}>
           {/* Header */}
           <div>
             <div className="mb-3 flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-semibold text-gray-500">

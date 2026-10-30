@@ -32,16 +32,14 @@ export function Games() {
           }}
         />
 
-        <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {mainGames.slice(0, 2).map((game, index) => (
-            <div key={game.id} className={index === 0 ? 'lg:col-span-2' : ''}>
-              <ProjectCard project={game} featured={index === 0} delay={index * 0.08} />
-            </div>
+        <div>
+          {mainGames.slice(0, 1).map((game) => (
+            <ProjectCard key={game.id} project={game} featured />
           ))}
         </div>
 
-        <div className="mt-8 grid gap-7 md:grid-cols-2 lg:gap-8">
-          {mainGames.slice(2).map((game, index) => (
+        <div className="mt-8 grid gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {mainGames.slice(1).map((game, index) => (
             <ProjectCard key={game.id} project={game} delay={index * 0.08} />
           ))}
         </div>
@@ -61,7 +59,7 @@ export function Games() {
           </button>
         </div>
 
-        <div id="more-games" className={showMore ? 'mt-8 grid gap-7 md:grid-cols-2 lg:gap-8' : ''}>
+        <div id="more-games" className={showMore ? 'mt-8 grid gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-8' : ''}>
           {showMore && moreGames.map((game, index) => (
             <ProjectCard key={game.id} project={game} delay={index * 0.08} />
           ))}

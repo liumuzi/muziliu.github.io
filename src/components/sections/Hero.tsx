@@ -1,8 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { personalInfo } from '@/data/content';
 import { SECTIONS } from '@/lib/constants';
@@ -10,26 +8,12 @@ import { SECTIONS } from '@/lib/constants';
 export function Hero() {
   const { t, language } = useLanguage();
 
-  const scrollToAbout = () => {
-    const element = document.getElementById(SECTIONS.ABOUT);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToContact = () => {
-    const element = document.getElementById(SECTIONS.CONTACT);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Timeline items based on resume
   const timelineItems = [
     {
       period: { zh: '2024.09 - 至今', en: '2024.09 - PRESENT' },
       title: { zh: '独立游戏开发', en: 'INDIE GAME DEV' },
-      subtitle: { zh: '腾讯创作大赛AI玩法创作奖', en: 'TENCENT AI INNOVATION AWARD' },
+      subtitle: { zh: '多平台游戏设计与开发', en: 'GAME DESIGN & DEVELOPMENT' },
       index: '01',
     },
     {
@@ -64,26 +48,20 @@ export function Hero() {
       className="min-h-screen flex items-center p-4 sm:p-10 bg-gray-100 relative overflow-hidden"
     >
       {/* Background diagonal line */}
-      <motion.div
+      <div
         className="absolute top-1/2 left-1/2 w-[200vw] h-[1px] bg-gray-300 pointer-events-none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         style={{
           transform: 'translate(-50%, -50%) rotate(35deg)',
           zIndex: 0,
         }}
       />
 
-      {/* Identity and entry cards */}
+      {/* Identity and awards */}
       <div className="relative z-10 w-full max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end gap-6">
+        <div className="flex flex-col gap-8 md:flex-row md:items-end lg:gap-10">
           {/* Main identity card */}
-          <motion.div
-            initial={{ opacity: 0, y: 32, rotate: -1 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] flex flex-col"
+          <div
+            className="relative flex w-full max-w-[460px] flex-col border-2 border-gray-800 bg-white brutalist-shadow-sm"
           >
           {/* Corner crosshairs */}
           <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none z-20">
@@ -111,11 +89,11 @@ export function Hero() {
           </div>
 
           {/* Timeline list area */}
-          <div className="font-mono text-[11px]">
+          <div className="font-mono text-xs">
             {timelineItems.map((item, idx) => (
               <div
                 key={idx}
-                className="border-b border-gray-200 px-5 py-2 group cursor-default hover:bg-gray-50 transition-colors"
+                className="group cursor-default border-b border-gray-200 px-5 py-3 transition-colors hover:bg-gray-50"
               >
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-bold text-black">{t(item.period)}</span>
@@ -126,7 +104,7 @@ export function Hero() {
                 <div className="text-gray-600 uppercase tracking-wide leading-tight">
                   {t(item.title)}
                   <br />
-                  <span className={idx === 0 ? 'text-gray-900 text-sm font-bold' : 'text-gray-400 text-[10px]'}>
+                  <span className={idx === 0 ? 'text-gray-900 text-sm font-bold' : 'text-gray-500 text-[11px]'}>
                     {t(item.subtitle)}
                   </span>
                 </div>
@@ -134,15 +112,12 @@ export function Hero() {
             ))}
           </div>
 
-          </motion.div>
+          </div>
 
-          {/* Separate entry card, bottom-aligned with the identity card */}
-          <motion.nav
-            aria-label={t({ zh: '个人入口', en: 'Personal links' })}
-            initial={{ opacity: 0, y: 32, rotate: 1 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ duration: 0.7, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="relative bg-white border-2 border-gray-800 brutalist-shadow-sm hover:brutalist-shadow-hover hover:-translate-y-1 transition-all duration-200 w-full max-w-[420px] md:max-w-[280px] font-mono"
+          {/* Awards are proof points, not navigation. */}
+          <aside
+            aria-labelledby="hero-awards-title"
+            className="relative w-full max-w-[460px] border-2 border-gray-800 bg-white font-mono brutalist-shadow-sm md:max-w-[340px]"
           >
             <div className="absolute top-2 left-2 w-2.5 h-2.5 pointer-events-none">
               <div className="absolute top-1 left-0 w-full h-[1px] bg-gray-800" />
@@ -153,28 +128,45 @@ export function Hero() {
               <div className="absolute left-1 top-0 h-full w-[1px] bg-gray-800" />
             </div>
 
-            <div className="px-5 pt-8 pb-4 border-b-2 border-gray-800">
-              <p className="text-[10px] text-gray-400 font-bold tracking-[0.2em] mb-1">// 05</p>
-              <h2 className="text-2xl font-black text-gray-900 uppercase tracking-tight">
-                {t({ zh: '入口', en: 'INDEX' })}
+            <div className="border-b-2 border-gray-800 px-5 pb-4 pt-8">
+              <p className="mb-1 text-[10px] font-bold tracking-[0.2em] text-gray-400">// 03</p>
+              <h2 id="hero-awards-title" className="text-2xl font-black tracking-tight text-gray-900">
+                {t({ zh: '获奖作品', en: 'AWARDS' })}
               </h2>
             </div>
 
-            <div className="text-xs font-bold uppercase tracking-wider">
-              <Link href="/journal/" className="group flex items-center justify-between px-5 py-4 border-b border-gray-300 hover:bg-gray-900 hover:text-white transition-colors">
-                <span>{t({ zh: '日志', en: 'JOURNAL' })}</span>
-                <span className="text-gray-400 group-hover:text-white">01 ↗</span>
-              </Link>
-              <button onClick={scrollToAbout} className="group w-full flex items-center justify-between px-5 py-4 border-b border-gray-300 hover:bg-gray-900 hover:text-white transition-colors">
-                <span>{t({ zh: '作品集', en: 'PORTFOLIO' })}</span>
-                <span className="text-gray-400 group-hover:text-white">02 ↓</span>
-              </button>
-              <button onClick={scrollToContact} className="group w-full flex items-center justify-between px-5 py-4 hover:bg-gray-900 hover:text-white transition-colors">
-                <span>{t({ zh: '联系', en: 'CONTACT' })}</span>
-                <span className="text-gray-400 group-hover:text-white">03 ↓</span>
-              </button>
-            </div>
-          </motion.nav>
+            <ol className="divide-y divide-gray-200">
+              {[
+                {
+                  year: '2026',
+                  event: { zh: '光子游戏大赛', en: 'Photon Game Competition' },
+                  award: { zh: '概念赛道银奖', en: 'Concept Track · Silver Award' },
+                  project: { zh: '《虫虫家装》', en: 'Bug Décor' },
+                },
+                {
+                  year: '2026',
+                  event: { zh: '上海 AIGC 国际大赛', en: 'Shanghai International AIGC Competition' },
+                  award: { zh: 'AI 游戏赛道优秀作品奖', en: 'AI Game Track · Outstanding Work' },
+                  project: { zh: '《虫虫家装》', en: 'Bug Décor' },
+                },
+                {
+                  year: '2025',
+                  event: { zh: '腾讯游戏创作大赛', en: 'Tencent Game Creation Competition' },
+                  award: { zh: 'AI 玩法创作奖', en: 'AI Gameplay Innovation Award' },
+                  project: { zh: '《我的恋综超失控》', en: 'Love Mission 404' },
+                },
+              ].map((item) => (
+                <li key={item.year + item.event.en} className="px-5 py-4">
+                  <div className="mb-1 flex items-baseline justify-between gap-3 text-[11px] font-semibold text-gray-500">
+                    <span>{t(item.event)}</span>
+                    <span>{item.year}</span>
+                  </div>
+                  <p className="text-sm font-bold leading-snug text-gray-900">{t(item.award)}</p>
+                  <p className="mt-1 text-[11px] text-gray-500">{t(item.project)}</p>
+                </li>
+              ))}
+            </ol>
+          </aside>
         </div>
       </div>
 

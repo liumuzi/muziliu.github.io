@@ -25,6 +25,10 @@ export const games: GameProject[] = [
         en: 'Winner of Tencent Game Creation Competition 2025 AI Gameplay Innovation Award',
       },
       {
+        zh: '光子游戏大赛高校赛道铜奖',
+        en: 'Bronze Award, University Track, Photon Game Competition',
+      },
+      {
         zh: '小红书爆款报道均赞1.6k+；游研社、LitGate等报道',
         en: 'Viral Xiaohongshu coverage avg 1.6k+ likes; featured by Gaming Society, LitGate, etc.',
       },
@@ -114,8 +118,8 @@ export const games: GameProject[] = [
       en: '2025.12 - Present',
     },
     description: {
-      zh: '温情的装修冒险：在危险的丛林中搜集资源，为水獭家族等小动物装修梦想之家，建立跨种族的羁绊。负责核心程序，实现装修+搜打撤核心玩法并制作原型，组建六人团队并主导敏捷开发。',
-      en: 'Heartwarming renovation adventure: gather resources in a dangerous forest to renovate dream homes for otter families and other animals, building cross-species bonds. Responsible for core programming and the decorate-plus-scavenge-and-retreat loop, built the prototype, formed a six-person team, and led agile delivery.',
+      zh: '温情的装修冒险：在危险的丛林中搜集资源，为水獭家族等小动物装修梦想之家，建立跨种族的羁绊。负责核心程序，实现装修+搜打撤核心玩法并制作原型，组建团队并主导敏捷开发。',
+      en: 'Heartwarming renovation adventure: gather resources in a dangerous forest to renovate dream homes for otter families and other animals, building cross-species bonds. Responsible for core programming and the decorate-plus-scavenge-and-retreat loop, built the prototype, formed a team, and led agile delivery.',
     },
     achievements: [
       {

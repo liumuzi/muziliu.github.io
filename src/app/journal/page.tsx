@@ -6,6 +6,7 @@ import { Journal } from '@/components/sections/Journal';
 export const metadata: Metadata = {
   title: 'Journal — Muzi Liu',
   description: 'Short notes from Muzi Liu on making, technology, and life.',
+  robots: { index: false, follow: false },
 };
 
 export default function JournalPage() {
